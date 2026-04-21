@@ -16,6 +16,7 @@
 \usepackage{url}
 \usepackage{makeidx}
 \usepackage{tabularx}
+\usepackage{float}
 \usepackage[official]{eurosym}
 
 \usepackage{hyperref}
@@ -84,6 +85,23 @@ Opis problema, ki ga naša rešitev reši.
 
 \section{Opis uporabljene strojne in programske opreme}
 Kratek opis uporabljene strojne in programske opreme.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Tipi napadov na bluetooth naprave}
 \subsection{BlueSnarfing}
@@ -328,6 +346,61 @@ Na podlagi opravljenih testov lahko zaključim naslednje:
 \end{itemize}
 
 Napad CVE-2023-45866 tako predstavlja resno varnostno tveganje za vse neposodobljene Android naprave, saj napadalcu omogoča popoln nadzor nad vnosom tipk – od odpiranja zlonamernih spletnih strani do izvajanja sistemskih ukazov.
+
+\subsection{Denial of Service (DoS)}
+V tem napadu bom poskušal prekiniti povezavo med dvema napravama, in sicer med brezžičnimi slušalkami OPPO Enco X2 in telefonom OPPO Find X5. To bom poskušal doseči z ukazom \texttt{l2ping}, kasneje pa bom ta ukaz izvajal vzporedno (z več nitmi), da bom poslal večje število paketov.
+
+Najprej se pogovorimo o pripravah na ta napad. Veliko boljših brezžičnih slušalk ima zaščito pred tovrstnimi napadi, med njimi tudi OPPO Enco X2. Te se varujejo tako, da preprosto zavržejo vse pakete, ki ne prihajajo iz naprave, s katero so trenutno povezane. Seveda bi se z dovolj veliko količino paketov tudi ta zaščita lahko sesula. Ena dobrih lastnosti teh slušalk pa je funkcija, ki dovoljuje, da sta nanje hkrati povezani dve napravi. To je lahko uporabno v zelo specifičnih primerih – na primer, če si s partnerjem izmenjujeta predvajanje glasbe – toda nam odpre možnost za naš DoS napad.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{connesione_doppia_enco.jpg}
+	\caption{Nastavitve slušalk, ki dovoljujejo dvojno povezavo}
+	\label{fig:img1}
+\end{figure}
+
+Tako sem se najprej s telefonom povezal na slušalke, nato pa poskušal izvesti DoS napad z ukazom \texttt{l2ping}.
+
+Najprej sem preizkusil ukaz:
+\begin{verbatim}
+	l2ping -i hci0 -s 600 -f 2C:4D:79:78:2F:D7
+\end{verbatim}
+Ta konstantno pošilja ping pakete z velikostjo 600 bajtov in čim manjšo zakasnitvijo (to omogoča zastavica \texttt{-f}). Na ta napad so bile slušalke popolnoma odporne, saj imajo očitno dovolj procesorske moči, da odgovorijo na vsak tak ICMP (ping) paket. Zato je bilo treba napad izboljšati – to smo dosegli z multithreadingom, tj. z zagonom več takih ukazov hkrati. Pri tem smo si pomagali s python skripto \texttt{badblue.py}. Ta zažene 300 niti (threadov) z enakim ukazom kot prej in tako uspešno sesuje povezavo med telefonom in slušalkami.
+
+Napad sem preizkusil tudi na telefonu OPPO Find X5 in Samsung Galaxy Ace S5830. Na OPPO Find X5 ni imel vpliva, medtem ko je imel Samsung Galaxy Ace S5830 velike težave z Bluetooth povezavo. Na moje ICMP pakete je odgovarjal z zamikom do 15000 ms oziroma 15 s, kar je povezavo naredilo praktično neuporabno.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Zaključek}
 Ali ste izpolnili cilje in možne nadaljne nadgradnje. Pri samem opisu rešitve se običajno sklicujemo na reference, npr. \cite{cisco}. 
