@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  21 APR 2026 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  21 APR 2026 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -550,26 +550,29 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
 62.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Overfull \hbox (237.86829pt too wide) in paragraph at lines 292--292
-[] \T1/lmtt/m/n/10.95 REM Ta string sem sicer lo£il da med vsako £rko malo po£a
-ka saj sem mel probleme da je prehitro tipkalo[] 
+) [7{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (13.48828pt too wide) in paragraph at lines 308--308
+[]|\T1/lmr/bx/n/10 Bluetooth
  []
 
-[7{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [8] (./porocilo.bbl)
-[9] (./porocilo.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+\T1/lmr/bx/n/10 raz-li-
+ []
+
+[8] [9] (./porocilo.bbl) [10] (./porocilo.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: FC13602BC2B627A15C3C64AB44646D19;3207.
+(rerunfilecheck)             Checksum: 3C393F6FD1E282154086F700BD6074FB;3562.
  ) 
 Here is how much of TeX's memory you used:
- 12792 strings out of 467533
- 205538 string characters out of 5422138
- 622784 words of memory out of 5000000
- 41480 multiletter control sequences out of 15000+600000
+ 12799 strings out of 467533
+ 205657 string characters out of 5422138
+ 622886 words of memory out of 5000000
+ 41483 multiletter control sequences out of 15000+600000
  687120 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,561b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -579,10 +582,10 @@ r/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mtt9.pfb>
-Output written on porocilo.pdf (10 pages, 244592 bytes).
+Output written on porocilo.pdf (11 pages, 252083 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -287,6 +287,47 @@ Napisal sem 2 bolj enostavna skripta za Rubber ducky in uporabil malo prilagojen
 	
 	
 \end{verbatim}
+\subsubsection{Rezultati testiranja}
+
+Za vsako od treh naprav sem poskusil izvesti dva različna DuckyScripta: prvi je prek brskalnika Chrome predvajal Rickroll video, drugi pa je poskušal odpreti sistemske nastavitve. Rezultati so prikazani v tabeli \ref{tab:hid_results}.
+
+\begin{table}[h]
+	\centering
+	\small
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\linewidth}{|l|X|c|c|}
+		\hline
+		\textbf{Naprava} & \textbf{Bluetooth različica} & \textbf{Rickroll} & \textbf{Odpiranje nastavitev} \\
+		\hline
+		OPPO Find X5 & 5.3 & Uspelo & Uspelo \\
+		\hline
+		Samsung Galaxy S7 edge & 4.2 & Uspelo & Uspelo \\
+		\hline
+		Samsung Galaxy Ace S5830 & 3.0 & Neuspešno & Neuspešno \\
+		\hline
+	\end{tabularx}
+	\caption{Uspešnost injiciranja tipk prek CVE-2023-45866 na testiranih napravah}
+	\label{tab:hid_results}
+\end{table}
+
+Pri obeh novejših napravah (OPPO Find X5 in Samsung S7 edge) je napad deloval brez vsakršnega opozorila ali zahteve po potrditvi, vendar le zato, ker sta bili napravi že predhodno seznanjeni (paired) z mojim Bluetooth adapterjem. Telefon je takoj sprejel povezavo s HID tipkovnico in izvedel vnešene ukaze, saj je zaupanje med napravama že obstajalo.
+
+Omeniti velja, da je bila ranljivost CVE-2023-45866 v času testiranja že uradno popravljena (patched). Pred popravkom pa napad sploh ni zahteval predhodnega seznanjanja – dovolj je bilo, da je napadalec vzpostavil HID povezavo brez kakršne koli predhodne interakcije z uporabnikom.
+
+Če bi imel napadalec na voljo naprednejšo strojno opremo, kot je \texttt{Ubertooth One}, bi lahko prisluškoval (sniffal) Bluetooth komunikacijo in posnel MAC naslov naprave, ki ji telefon že zaupa. Nato bi se lahko predstavljal kot ta naprava (MAC address spoofing) in s tem izvedel enake ukaze, ne da bi bilo potrebno kakršno koli predhodno seznanjanje – telefon bi namreč povezavo sprejel, ker bi verjel, da komunicira z že znano in zaupano napravo.
+
+Pri najstarejši napravi, Samsung Galaxy Ace S5830 (Bluetooth 3.0), napad ni uspel. Telefon se ni odzval na poskuse vzpostavitve HID povezave. Razlog je v tem, da ta naprava podpira le zelo omejen nabor Bluetooth storitev in profilov – med drugim ne ponuja profila HID (Human Interface Device) prek Bluetootha. Poleg tega ima odprtih le nekaj RFCOMM kanalov (predvsem za Headset in Handsfree), zato preprosto ni imela ustreznega vstopnega mesta za tovrstni napad.
+
+\subsubsection{Ugotovitve}
+
+Na podlagi opravljenih testov lahko zaključim naslednje:
+\begin{itemize}
+	\item Ranljivost CVE-2023-45866 omogoča injiciranje tipk na vseh novejših Android napravah (Bluetooth 4.2 in novejši), ki niso bile popravljene. Napad poteka popolnoma brez interakcije uporabnika – žrtev ne vidi nobenega obvestila o parjenju ali povezovanju.
+	\item Čeprav je bilo za prvo povezavo včasih treba potrditi dovoljenje za seznanitev (pairing), bi to oviro lahko zaobšli z uporabo naprednejše strojne opreme, kot je \texttt{Ubertooth One}. S slednjo bi lahko ponaredili (spoofali) MAC naslov naprave, ki ji telefon že zaupa, in se tako predstavljali kot že prej potrjena naprava.
+	\item Starejše naprave (Bluetooth 3.0 in nižje) praviloma niso ranljive za ta napad, ker ne podpirajo HID profila prek Bluetootha oziroma nimajo dovolj odprtih storitev, prek katerih bi lahko vzpostavili takšno povezavo.
+\end{itemize}
+
+Napad CVE-2023-45866 tako predstavlja resno varnostno tveganje za vse neposodobljene Android naprave, saj napadalcu omogoča popoln nadzor nad vnosom tipk – od odpiranja zlonamernih spletnih strani do izvajanja sistemskih ukazov.
 
 \section{Zaključek}
 Ali ste izpolnili cilje in možne nadaljne nadgradnje. Pri samem opisu rešitve se običajno sklicujemo na reference, npr. \cite{cisco}. 
