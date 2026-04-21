@@ -15,6 +15,7 @@
 \usepackage{color}
 \usepackage{url}
 \usepackage{makeidx}
+\usepackage{tabularx}
 \usepackage[official]{eurosym}
 
 \usepackage{hyperref}
@@ -84,11 +85,208 @@ Opis problema, ki ga naša rešitev reši.
 \section{Opis uporabljene strojne in programske opreme}
 Kratek opis uporabljene strojne in programske opreme.
 
-\section{Rešitev}
-Podroben opis rešitve. Sem spadajo načrtovanje, struktura omrežja, opis sprogramiranih modulov, konfiguracije usmerjevalnikov in omrežij.
+\section{Tipi napadov na bluetooth naprave}
+\subsection{BlueSnarfing}
+BlueSnarfing je neavtoriziran dostop do informacij na brezžični napravi prek Bluetooth povezave. Ta napad omogoča pridobitev dostopa do koledarja, telefonskega imenika, e-pošte, SMS sporočil in drugih osebnih podatkov. Pogosto izkorišča profil OBEX Push (Object Exchange), ki ob nepravilni konfiguraciji razkrije podatke brez potrditve uporabnika.
 
-\section{Rezultati}
-Podroben opis rezultatov in pregled grafov performančne analize.
+\subsection{MAC address spoofing}
+Ta napad se lahko zgodi, ko se napravi dogovarjata za varne ključe, s katerimi bosta komunicirali, torej mora biti napadalec že na začetku prisoten. Napadalec ponaredi (spoofa) MAC naslov zaupanja vredne naprave in tako prelisiči ciljno napravo, da se poveže z njegovo namesto s prvotno napravo. S tem lahko prestreže komunikacijo ali se lažno avtenticira, ne da bi razkril svoj pravi naslov.
+
+\subsection{BlueBorne}
+BlueBorne je kolekcija več Bluetooth napadov, ki izkoriščajo napake v Bluetooth kopici (stack), zlasti v BlueZ (Linux), Androidu, Windows in iOS. Z uporabo prekoračitve medpomnilnika (buffer overflow) ali drugih pomnilniških napak lahko napadalec na ciljni napravi izvede poljubno nezaželeno kodo, brez da bi bil seznanjen z napravo ali da bi ta zahtevala paring.
+
+\subsection{Reflection Attack}
+Do reflection napada pride, ko napadalec prestreže avtentikacijske podatke (npr. kriptografske izzive in odgovore) med dvema napravama in jih nato ponovi (reflektira) tretji napravi ali isti napravi v drugem času. S tem ne razkrije nobenih lastnih informacij in lahko pridobi neavtoriziran dostop do storitev, kot da bi bil legitimen uporabnik, medtem ko se predstavlja za nekoga drugega.
+
+\subsection{Denial of Service (DoS)}
+Pri tem napadu napadalec poskuša prekiniti povezavo med dvema napravama ali narediti Bluetooth vmesnik popolnoma neuporaben. To doseže s pošiljanjem velikega števila paketov (npr. zahtevkov L2CAP, SDP ali praznih paketov), kar povzroči preobremenitev in sesutje Bluetooth kopice. Posledično naprava ne more več vzpostavljati novih povezav ali pa se obstoječe prekinejo.
+
+\subsection{Bluejacking}
+Bluejacking je pošiljanje nezaželenih sporočil prek Bluetootha. Napadalec uporabi protokol OBEX (lahek komunikacijski protokol za pošiljanje binarnih datotek), da pošlje kratko sporočilo svojemu imeniku, ki se prikaže na zaslonu žrtve. Čeprav je bluejacking večinoma nedolžna potegavščina, se lahko zlorabi za namene socialnega inženiringa ali širjenja zlonamerne vsebine.
+
+\subsection{Bluesmacking}
+Bluesmacking je oblika DoS napada, specifična za Bluetooth. Napadalec pošlje veliko število lažnih zahtevkov L2CAP echo (ping) na ciljno napravo, ki jih ta ne more pravilno obdelati. To povzroči preobremenitev procesorja in posledično izpad Bluetooth storitev.
+
+\subsection{PIN Brute Force}
+Pri starejših napravah z Bluetooth 2.0 in nižje se uporablja kratek PIN (običajno 4–6 števk). Napadalec lahko s prisluškovanjem parjenju prestreže izmenjane pakete in nato s programom (npr. `btcrack`) poskusi vse možne kombinacije PIN kode. Ko jo odkrije, lahko izračuna skupne ključe in dešifrira celotno komunikacijo.
+
+\section{Eksperimentalna analiza Bluetooth napadov}
+V tem delu smo preučili različne bluetooth napade na različnih napravah.
+
+Najprej pa rabimo spoznati par orodij, ki jih bomo uporabljali poleg teh napadov.
+
+\subsection{Hcitool}
+
+\texttt{hcitool} je ukaz v Linuxu, ki omogoča upravljanje in nadzor Bluetooth povezav na nizki ravni (Host Controller Interface - HCI). Je del paketa \texttt{BlueZ}, najbolj razširjene Bluetooth implementacije za Linux, ki mu omogoča neposredno komunikacijo s strojno opremo (adapterjem). V spodnji tabeli so predstavljeni najpogosteje uporabljeni ukazi, ki jih bom uporabljal v napadih in njihov namen.
+
+\begin{table}[h]
+	\centering
+	\small
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		\textbf{Ukaz} & \textbf{Opis} \\
+		\hline
+		\texttt{hcitool dev} & Prikaže seznam lokalnih Bluetooth adapterjev (npr. \texttt{hci0}). \\
+		\hline
+		\texttt{hcitool scan} & Skenira vse odkrivajoče se naprave v dosegu in izpiše njihov MAC naslov ter ime. \\
+		\hline
+		\texttt{hcitool info <MAC>} & Pridobi podrobne informacije (ime, razred, LMP verzijo, značilnosti). \\
+		\hline
+		\texttt{hcitool rssi <MAC>} & Prikaže jakost signala (RSSI) za povezano napravo. \\
+		\hline
+		\texttt{hcitool lq <MAC>} & Prikaže kakovost povezave (Link Quality). \\
+		\hline
+		\texttt{hcitool lescan} & Skenira BLE (Bluetooth Low Energy) naprave. \\
+		\hline
+		\texttt{hcitool leinfo <MAC>} & Pridobi informacije o BLE napravi. \\
+		\hline
+	\end{tabularx}
+	\caption{Pregled ukazov orodja \texttt{hcitool}}
+	\label{tab:hcitool}
+\end{table}
+
+\subsection{Bluetoothctl}
+
+\texttt{bluetoothctl} je sodobno interaktivno orodje za upravljanje Bluetooth naprav v Linuxu. Prav tako je del paketa \texttt{BlueZ}, vendar za razliko od zastarelega \texttt{hcitool} ponuja višjenivojski vmesnik, ki podpira vse sodobne Bluetooth profile in storitve, vključno s poenostavljenim seznanjanjem (pairing), zaupanjem naprav (trust) in upravljanjem BLE naprav. Uporablja se v interaktivnem načinu, kjer uporabnik vnaša ukaze v lastno lupino.
+
+V spodnji tabeli so predstavljeni najpogosteje uporabljeni ukazi znotraj \texttt{bluetoothctl}.
+
+\begin{table}[h]
+	\centering
+	\small
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		\textbf{Ukaz} & \textbf{Opis} \\
+		\hline
+		\texttt{power on} & Vklopi Bluetooth adapter. \\
+		\hline
+		\texttt{power off} & Izklopi Bluetooth adapter. \\
+		\hline
+		\texttt{scan on} & Začne skenirati naprave v dosegu. \\
+		\hline
+		\texttt{scan off} & Ustavi skeniranje. \\
+		\hline
+		\texttt{devices} & Prikaže seznam vseh naprav, ki jih je adapter zaznal. \\
+		\hline
+		\texttt{pair <MAC>} & Začne postopek seznanjanja z napravo z danim MAC naslovom. \\
+		\hline
+		\texttt{trust <MAC>} & Označi napravo kot zaupanja vredno (samodejno dovoli povezave brez ponovnega seznanjanja). \\
+		\hline
+		\texttt{connect <MAC>} & Vzpostavi povezavo s predhodno seznanjeno napravo. \\
+		\hline
+		\texttt{disconnect <MAC>} & Prekine povezavo z napravo. \\
+		\hline
+		\texttt{remove <MAC>} & Odstrani napravo iz seznama seznanjenih (pozabi jo). \\
+		\hline
+		\texttt{info <MAC>} & Prikaže podrobne informacije o napravi (ime, razred, UUID, stanje povezave). \\
+		\hline
+		\texttt{show} & Prikaže informacije o lokalnem Bluetooth adapterju. \\
+		\hline
+		\texttt{agent on} & Vklopi agenta za upravljanje PIN kod in potrditev parjenja. \\
+		\hline
+		\texttt{default-agent} & Nastavi trenutnega agenta kot privzetega. \\
+		\hline
+		\texttt{exit} & Zapre \texttt{bluetoothctl}. \\
+		\hline
+	\end{tabularx}
+	\caption{Pregled ukazov orodja \texttt{bluetoothctl}}
+	\label{tab:bluetoothctl}
+\end{table}
+
+Orodje \texttt{bluetoothctl} je danes standardni način za upravljanje Bluetooth povezav v Linuxu in popolnoma nadomešča starejša orodja, kot so \texttt{hcitool}, \texttt{rfcomm} in \texttt{sdptool}. Omogoča tudi delo z BLE napravami prek podukazov, kot sta \texttt{ble} in \texttt{advertise}.
+
+\subsection{Sdptool}
+
+\texttt{sdptool} je ukaz v Linuxu, ki omogoča poizvedovanje in upravljanje strežnikov protokola SDP (Service Discovery Protocol). Je del paketa \texttt{BlueZ} in omogoča iskanje specifičnih storitev na oddaljenih napravah ter pregled vseh razpoložljivih storitev prek ukaza \texttt{browse}. SDP je ključnega pomena za odkrivanje storitev, ki jih naprava ponuja (npr. prenos datotek, dostop do telefonskega imenika, brezžični zvok). V spodnji tabeli je predstavljen najpomembnejši ukaz orodja \texttt{sdptool}.
+
+\begin{table}[h]
+	\centering
+	\small
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		\textbf{Ukaz} & \textbf{Opis} \\
+		\hline
+		\texttt{sdptool browse <MAC>} & Pregled vseh razpoložljivih storitev na oddaljeni napravi z danim MAC naslovom. Izpiše imena storitev, kanale in profile. \\
+		\hline
+	\end{tabularx}
+	\caption{Pregled ukazov orodja \texttt{sdptool}}
+	\label{tab:sdptool}
+\end{table}
+
+Orodje \texttt{sdptool} je danes označeno kot zastarelo in ga v sodobnih distribucijah Linuxa nadomeščata orodji \texttt{bluetoothctl} in \texttt{btmgmt}. Kljub temu pa ostaja uporabno za poglobljeno diagnostiko in razumevanje protokola SDP, zlasti pri starejših napravah in sistemih.
+
+\subsection{Še nekaj osnovnih ukazov}
+\begin{table}[h]
+	\centering
+	\small
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		\textbf{Ukaz} & \textbf{Opis} \\
+		\hline
+		\texttt{hciconfig -a} & Prikaže podrobne informacije o vseh Bluetooth vmesnikih (npr. \texttt{hci0}), vključno z MAC naslovom, stanjem (UP/DOWN), različico HCI, imenom naprave in razredom. \\
+		\hline
+		\texttt{hciconfig hci0 up} & Aktivira (vklopi) Bluetooth vmesnik \texttt{hci0}. Po tem ukazu je adapter pripravljen za skeniranje in povezovanje. \\
+		\hline
+		\texttt{hciconfig hci0 down} & Deaktivira (izklopi) Bluetooth vmesnik \texttt{hci0}. \\
+		\hline
+		\texttt{hciconfig hci0 reset} & Ponastavi Bluetooth vmesnik \texttt{hci0}. Uporabno, kadar adapter ne odziva pravilno. \\
+		\hline
+		\texttt{hciconfig hci0 name "ime"} & Spremeni lokalno ime Bluetooth naprave (prikazano ob skeniranju). \\
+		\hline
+		\texttt{systemctl start bluetooth} & Zažene Bluetooth storitev (oz. \texttt{bluetooth.service}) v sistemu. \\
+		\hline
+		\texttt{systemctl stop bluetooth} & Ustavi Bluetooth storitev. \\
+		\hline
+		\texttt{systemctl restart bluetooth} & Ponovno zažene Bluetooth storitev – uporabno po spreminjanju konfiguracije ali odpravljanju težav. \\
+		\hline
+		\texttt{systemctl enable bluetooth} & Nastavi, da se Bluetooth storitev samodejno zažene ob zagonu sistema. \\
+		\hline
+		\texttt{systemctl status bluetooth} & Prikaže trenutno stanje Bluetooth storitve (ali je aktivna, morebitne napake). \\
+		\hline
+	\end{tabularx}
+	\caption{Pregled ukazov \texttt{hciconfig} in \texttt{systemctl} za Bluetooth}
+	\label{tab:hciconfig-systemctl}
+\end{table}
+
+Sedaj smo pregledali vse osnovne ukaze in kako se dela z bluetoothom na linux napravah, tako da lahko začnemo z dejanskimi napadi.
+
+\subsection{CVE-2023-45866}
+
+Prvi napad, ki sem ga izvedel, temelji na ranljivosti CVE-2023-45866. V sklopu \texttt{BlueZ} lahko neavtenticirana HID (Human interface device) naprava v vlogi periferne enote vzpostavi šifrirano povezavo in pošilja poročila HID tipkovnice, ne da bi centralna naprava zahtevala kakršno koli interakcijo uporabnika. S tem je možno injicirati HID sporočila (npr. pritiske tipk) brez vednosti uporabnika.
+Ta napad sem testiral na treh telefonskih napravah in sicer: 
+\begin{itemize}
+	\item OPPO Find X5 (bluetooth 5.3)
+	\item Samsung Galaxy S7 edge (bluetooth 4.2)
+	\item Samsung Galaxy Ace S5830 (bluetooth 3.0)
+\end{itemize}
+
+Mogoče poznate Rubber Ducky, to je USB ključek, ki na površini zgleda kot vsak drug ključek, ampak ko ga priključiš v računalnik se predstavlja kot da je human interface device (npr. tipkovnica) in začne izvajati neko kodo, ker je računalnik narejen tako da zaupa človeku to kodo izvede. Kaj če bi to lahko naredil kdorkoli samo z dostopom do bluetootha? Izkaže se da s CVE-2023-45866 lahko točno to dosežemo.
+Napisal sem 2 bolj enostavna skripta za Rubber ducky in uporabil malo prilagojeno kodo BlueDucky (\url{https://github.com/pentestfunctions/BlueDucky}) en od teh skriptov je bolj satiričen in sicer predvaja pesem Rick Astley - Never gonna give you up, drugi pa gre v nastavitve telefona.
+
+\begin{verbatim}
+	REM Rickroll Android
+	DELAY 2000
+	
+	REM Open Chrome
+	GUI b
+	DELAY 500
+	CTRL l
+	STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ
+	ENTER
+	DELAY 3000
+
+	
+	REM Go to settings
+	DELAY 2000
+	GUI i
+	DELAY 500
+	
+	
+\end{verbatim}
 
 \section{Zaključek}
 Ali ste izpolnili cilje in možne nadaljne nadgradnje. Pri samem opisu rešitve se običajno sklicujemo na reference, npr. \cite{cisco}. 

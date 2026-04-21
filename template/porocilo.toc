@@ -1,6 +1,19 @@
 \babel@toc {slovene}{}\relax 
 \contentsline {section}{\numberline {1}Uvod in motivacija}{2}{section.1}%
 \contentsline {section}{\numberline {2}Opis uporabljene strojne in programske opreme}{2}{section.2}%
-\contentsline {section}{\numberline {3}Rešitev}{2}{section.3}%
-\contentsline {section}{\numberline {4}Rezultati}{2}{section.4}%
-\contentsline {section}{\numberline {5}Zaključek}{2}{section.5}%
+\contentsline {section}{\numberline {3}Tipi napadov na bluetooth naprave}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}BlueSnarfing}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}MAC address spoofing}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}BlueBorne}{2}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Reflection Attack}{3}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Denial of Service (DoS)}{3}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Bluejacking}{3}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Bluesmacking}{3}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}PIN Brute Force}{3}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Eksperimentalna analiza Bluetooth napadov}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Hcitool}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bluetoothctl}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Sdptool}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Še nekaj osnovnih ukazov}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}CVE-2023-45866}{7}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Zaključek}{8}{section.5}%
