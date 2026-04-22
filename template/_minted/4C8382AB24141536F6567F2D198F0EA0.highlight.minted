@@ -1,0 +1,24 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+	\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{subprocess}
+	\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{re}
+	
+	\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{ping\PYGZus{}bluetooth}\PYG{p}{(}\PYG{n}{mac\PYGZus{}address}\PYG{p}{,} \PYG{n}{count}\PYG{o}{=}\PYG{l+m+mi}{100}\PYG{p}{,} \PYG{n}{device}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}hci0\PYGZdq{}}\PYG{p}{):}
+		\PYG{n}{cmd} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}l2ping\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}c\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{count}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}i\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{device}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}f\PYGZsq{}}\PYG{p}{,} \PYG{n}{mac\PYGZus{}address}\PYG{p}{]}
+		\PYG{n}{result} \PYG{o}{=} \PYG{n}{subprocess}\PYG{o}{.}\PYG{n}{run}\PYG{p}{(}\PYG{n}{cmd}\PYG{p}{,} \PYG{n}{capture\PYGZus{}output}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+		
+		\PYG{n}{times} \PYG{o}{=} \PYG{p}{[]}
+		\PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{result}\PYG{o}{.}\PYG{n}{stdout}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{):}
+			\PYG{n}{match} \PYG{o}{=} \PYG{n}{re}\PYG{o}{.}\PYG{n}{search}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}time\PYGZbs{}s+([\PYGZbs{}d\PYGZbs{}.]+)ms\PYGZsq{}}\PYG{p}{,} \PYG{n}{line}\PYG{p}{)}
+			\PYG{k}{if} \PYG{n}{match}\PYG{p}{:}
+				\PYG{n}{times}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{match}\PYG{o}{.}\PYG{n}{group}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)))}
+			
+		\PYG{k}{if} \PYG{n}{times}\PYG{p}{:}
+			\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Min: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{times}\PYG{p}{)}\PYG{l+s+si}{:}\PYG{l+s+s2}{.2f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ ms\PYGZdq{}}\PYG{p}{)}
+			\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Avg: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb}{sum}\PYG{p}{(}\PYG{n}{times}\PYG{p}{)}\PYG{o}{/}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{times}\PYG{p}{)}\PYG{l+s+si}{:}\PYG{l+s+s2}{.2f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ ms\PYGZdq{}}\PYG{p}{)}
+			\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Max: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{times}\PYG{p}{)}\PYG{l+s+si}{:}\PYG{l+s+s2}{.2f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ ms\PYGZdq{}}\PYG{p}{)}
+		\PYG{k}{else}\PYG{p}{:}
+			\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}No ping responses received.\PYGZdq{}}\PYG{p}{)}
+		
+	\PYG{n}{ping\PYGZus{}bluetooth}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}70:28:8B:B8:29:57\PYGZsq{}}\PYG{p}{)}
+	
+\end{MintedVerbatim}
