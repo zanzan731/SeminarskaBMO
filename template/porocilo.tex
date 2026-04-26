@@ -274,6 +274,17 @@ V zajetem prometu opazimo več zaporednih parov \texttt{Echo Request} in \texttt
 
 Ta faza predstavlja glavni del prenosa podatkov in praktično uporabo vzpostavljene Bluetooth povezave.
 
+Na koncu velja omeniti, da se lahko pri analizi L2CAP komunikacije v določenih primerih pojavi tudi paket \texttt{Echo Response [Malformed Packet]}. Tak zapis pomeni, da Wireshark zazna nepravilno strukturiran ali nepopolno dekodiran paket, kar je lahko posledica napake v implementaciji Bluetooth sklada na napravi, nepopolnega zajema prometa ali nezdružljivosti med napravami.
+
+V analizirani komunikaciji z napravo OPPO Find X5 takšnih paketov nismo zaznali, kar kaže na pravilno in standardno implementacijo protokola. Vendar pa sem med testiranjem na napravi Samsung Galaxy Ace S5830 opazil pojav \texttt{Malformed Packet} pri \texttt{Echo Response}, kar nakazuje na morebitne omejitve ali nepravilnosti v starejši Bluetooth implementaciji te naprave.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{malformed_packet.png}
+	\caption{Napaka v komunikaciji z Samsung Galaxy Ace S5830}
+	\label{fig:malformed_packet}
+\end{figure}
+
 \subsubsection{Zaključek povezave}
 Po končani komunikaciji se povezava med napravama ustrezno prekine. Ta proces se začne z ukazom \texttt{Disconnect}, ki ga gostitelj (host) pošlje krmilniku z namenom prekinitve obstoječe povezave.
 

@@ -11,23 +11,23 @@
 \contentsline {subsection}{\numberline {4.1}BlueSnarfing}{10}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}MAC address spoofing}{10}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}BlueBorne}{10}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Reflection Attack}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Reflection Attack}{11}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Denial of Service (DoS)}{11}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Bluejacking}{11}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Bluesmacking}{11}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}PIN Brute Force}{11}{subsection.4.8}%
-\contentsline {section}{\numberline {5}Eksperimentalna analiza Bluetooth napadov}{11}{section.5}%
+\contentsline {subsection}{\numberline {4.8}PIN Brute Force}{12}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Eksperimentalna analiza Bluetooth napadov}{12}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Hcitool}{12}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Bluetoothctl}{12}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Sdptool}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.2}Bluetoothctl}{13}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Sdptool}{14}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Še nekaj osnovnih ukazov}{14}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}CVE-2023-45866}{14}{subsection.5.5}%
 \contentsline {subsubsection}{\numberline {5.5.1}Rezultati testiranja}{16}{subsubsection.5.5.1}%
 \contentsline {subsubsection}{\numberline {5.5.2}Ugotovitve}{17}{subsubsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}Denial of Service (DoS)}{17}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Bluetooth spam}{19}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.6}Denial of Service (DoS)}{18}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Bluetooth spam}{20}{subsection.5.7}%
 \contentsline {section}{\numberline {6}Zaščita pred Bluetooth napadi}{21}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Splošni ukrepi}{21}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Specifične zaščite glede na vrsto napada}{22}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Posebnosti za starejše naprave (Bluetooth 3.0 in nižje)}{22}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Posebnosti za starejše naprave (Bluetooth 3.0 in nižje)}{23}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Zaključek}{23}{section.7}%

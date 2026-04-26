@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  26 APR 2026 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  26 APR 2026 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,12 +660,12 @@ Overfull \hbox (54.59796pt too wide) in paragraph at lines 135--148
 \pydata@fh@0=\write6
 \openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260426204517 2625186A033BEFBA098DE7
+runsystem(latexminted config  --timestamp 20260426210017 2625186A033BEFBA098DE7
 0EC1FDEDA8)...executed safely (allowed).
 
 
 (./_2625186A033BEFBA098DE70EC1FDEDA8.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260426204517 2625186A033BEFBA0
+runsystem(latexminted cleanconfig  --timestamp 20260426210017 2625186A033BEFBA0
 98DE70EC1FDEDA8)...executed safely (allowed).
 
 
@@ -719,58 +719,63 @@ File: l2cap_wireshark.png Graphic file (type png)
 Package pdftex.def Info: l2cap_wireshark.png  used on input line 260.
 (pdftex.def)             Requested size: 360.0pt x 201.79483pt.
  [8 <./l2cap_wireshark.png>]
-<disconect.png, id=237, 1098.1025pt x 70.2625pt>
+<malformed_packet.png, id=237, 1171.37625pt x 86.3225pt>
+File: malformed_packet.png Graphic file (type png)
+<use malformed_packet.png>
+Package pdftex.def Info: malformed_packet.png  used on input line 283.
+(pdftex.def)             Requested size: 360.0pt x 26.52917pt.
+<disconect.png, id=238, 1098.1025pt x 70.2625pt>
 File: disconect.png Graphic file (type png)
 <use disconect.png>
-Package pdftex.def Info: disconect.png  used on input line 282.
+Package pdftex.def Info: disconect.png  used on input line 293.
 (pdftex.def)             Requested size: 360.0pt x 23.03444pt.
- [9 <./disconect.png>] [10] [11]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12] [13]
-Underfull \hbox (badness 8019) in paragraph at lines 455--455
+ [9 <./malformed_packet.png>] [10 <./disconect.png>] [11] [12] [13]
+Underfull \hbox (badness 8019) in paragraph at lines 466--466
 []|\T1/lmr/m/n/10 Deaktivira (iz-klopi) Blu-e-to-oth vme-snik
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 455--455
+Underfull \hbox (badness 1033) in paragraph at lines 466--466
 []|\T1/lmr/m/n/10 Spremeni lo-kalno ime Blu-e-to-oth na-prave
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--455
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
 []|\T1/lmr/m/n/10 Zaºene Blu-e-to-oth sto-ri-tev (oz.
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [14] [15]
-Overfull \hbox (13.48828pt too wide) in paragraph at lines 515--515
+Overfull \hbox (13.48828pt too wide) in paragraph at lines 526--526
 []|\T1/lmr/bx/n/10 Bluetooth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
+Underfull \hbox (badness 10000) in paragraph at lines 526--526
 \T1/lmr/bx/n/10 raz-li-
  []
 
 [16] [17]
-<connesione_doppia_enco.jpg, id=284, 1084.05pt x 1056.94875pt>
+<connesione_doppia_enco.jpg, id=286, 1084.05pt x 1056.94875pt>
 File: connesione_doppia_enco.jpg Graphic file (type jpg)
 <use connesione_doppia_enco.jpg>
-Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 550.
+Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 561.
 (pdftex.def)             Requested size: 360.0pt x 351.00366pt.
- [18 <./connesione_doppia_enco.jpg>]
-<flipper.png, id=292, 800.9925pt x 702.625pt>
+ [18] [19 <./connesione_doppia_enco.jpg>]
+<flipper.png, id=298, 800.9925pt x 702.625pt>
 File: flipper.png Graphic file (type png)
 <use flipper.png>
-Package pdftex.def Info: flipper.png  used on input line 569.
+Package pdftex.def Info: flipper.png  used on input line 580.
 (pdftex.def)             Requested size: 360.0pt x 315.79236pt.
- [19] [20 <./flipper.png>]
-Underfull \hbox (badness 1297) in paragraph at lines 619--619
+ [20 <./flipper.png>]
+[21]
+Underfull \hbox (badness 1297) in paragraph at lines 630--630
 []|\T1/lmr/m/n/10 Nikoli ne upo-ra-bljajte krat-kih PIN kod
  []
 
-[21] [22] [23] (./porocilo.bbl) [24] (./porocilo.aux)
+[22] [23] (./porocilo.bbl) [24] (./porocilo.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -779,10 +784,10 @@ Package rerunfilecheck Info: File `porocilo.out' has not changed.
 (rerunfilecheck)             Checksum: F7FA519E13F202C14548BEB4777BB84E;6541.
  ) 
 Here is how much of TeX's memory you used:
- 17706 strings out of 467533
- 339799 string characters out of 5422138
- 856759 words of memory out of 5000000
- 46275 multiletter control sequences out of 15000+600000
+ 17715 strings out of 467533
+ 340026 string characters out of 5422138
+ 856839 words of memory out of 5000000
+ 46283 multiletter control sequences out of 15000+600000
  699578 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,11n,93p,876b,1090s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -795,10 +800,10 @@ r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt9.pfb>
-Output written on porocilo.pdf (25 pages, 1051110 bytes).
+Output written on porocilo.pdf (25 pages, 1078700 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 77 named destinations out of 1000 (max. 500000)
- 308 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 411 PDF objects out of 1000 (max. 8388607)
+ 343 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 313 words of extra memory for PDF output out of 10000 (max. 10000000)
 
