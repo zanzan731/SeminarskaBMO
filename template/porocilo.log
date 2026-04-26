@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  22 APR 2026 22:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  26 APR 2026 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,42 +593,42 @@ Package hyperref Info: Link coloring OFF on input line 43.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-ec.enc}] (./porocilo.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
 .
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
 .
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-6.
+5.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-6.
+5.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 6.
+(Font)              <10.95> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
+(Font)              <6> on input line 5.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...e {5.7}Bluetooth spam}{16}{subsection.5.7}
+l.23 ...nekaj osnovnih ukazov}{14}{subsection.5.4}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `porocilo.toc'.
@@ -640,7 +640,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3]
-<l2ping_in_hcitool.png, id=170, 593.21625pt x 440.64626pt>
+<l2ping_in_hcitool.png, id=195, 593.21625pt x 440.64626pt>
 File: l2ping_in_hcitool.png Graphic file (type png)
 <use l2ping_in_hcitool.png>
 Package pdftex.def Info: l2ping_in_hcitool.png  used on input line 125.
@@ -660,22 +660,16 @@ Overfull \hbox (54.59796pt too wide) in paragraph at lines 135--148
 \pydata@fh@0=\write6
 \openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260422222439 2625186A033BEFBA098DE7
+runsystem(latexminted config  --timestamp 20260426204517 2625186A033BEFBA098DE7
 0EC1FDEDA8)...executed safely (allowed).
 
 
 (./_2625186A033BEFBA098DE70EC1FDEDA8.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260422222439 2625186A033BEFBA0
+runsystem(latexminted cleanconfig  --timestamp 20260426204517 2625186A033BEFBA0
 98DE70EC1FDEDA8)...executed safely (allowed).
 
 
 (./_minted/default.style.minted)
-\openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20260422222439 2625186A033BEFBA098
-DE70EC1FDEDA8)...executed safely (allowed).
-
-
 (./_minted/4C8382AB24141536F6567F2D198F0EA0.highlight.minted
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2.
@@ -696,78 +690,102 @@ Overfull \hbox (54.59796pt too wide) in paragraph at lines 190--203
  [][] 
  []
 
-[6] [7] [8] [9]
-Underfull \hbox (badness 8019) in paragraph at lines 371--371
+<handshake.png, id=215, 1059.96pt x 69.25874pt>
+File: handshake.png Graphic file (type png)
+<use handshake.png>
+Package pdftex.def Info: handshake.png  used on input line 219.
+(pdftex.def)             Requested size: 360.0pt x 23.5223pt.
+[6 <./handshake.png>]
+<zmogljivost_identifikacija.png, id=223, 1314.9125pt x 492.84125pt>
+File: zmogljivost_identifikacija.png Graphic file (type png)
+<use zmogljivost_identifikacija.png>
+Package pdftex.def Info: zmogljivost_identifikacija.png  used on input line 235
+.
+(pdftex.def)             Requested size: 360.0pt x 134.92638pt.
+
+Overfull \hbox (7.87697pt too wide) in paragraph at lines 242--243
+[]\T1/lmr/m/n/10.95 Najprej se iz-ve-dejo ukazi \T1/lmtt/m/n/10.95 Read Remote 
+Supported Features \T1/lmr/m/n/10.95 in \T1/lmtt/m/n/10.95 Read Remote
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+48.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [7 <./zmogljivost_identifikacija.png>]
+<l2cap_wireshark.png, id=230, 1251.67625pt x 701.62125pt>
+File: l2cap_wireshark.png Graphic file (type png)
+<use l2cap_wireshark.png>
+Package pdftex.def Info: l2cap_wireshark.png  used on input line 260.
+(pdftex.def)             Requested size: 360.0pt x 201.79483pt.
+ [8 <./l2cap_wireshark.png>]
+<disconect.png, id=237, 1098.1025pt x 70.2625pt>
+File: disconect.png Graphic file (type png)
+<use disconect.png>
+Package pdftex.def Info: disconect.png  used on input line 282.
+(pdftex.def)             Requested size: 360.0pt x 23.03444pt.
+ [9 <./disconect.png>] [10] [11]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12] [13]
+Underfull \hbox (badness 8019) in paragraph at lines 455--455
 []|\T1/lmr/m/n/10 Deaktivira (iz-klopi) Blu-e-to-oth vme-snik
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 371--371
+Underfull \hbox (badness 1033) in paragraph at lines 455--455
 []|\T1/lmr/m/n/10 Spremeni lo-kalno ime Blu-e-to-oth na-prave
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 455--455
 []|\T1/lmr/m/n/10 Zaºene Blu-e-to-oth sto-ri-tev (oz.
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-83.
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10] [11]
-Overfull \hbox (13.48828pt too wide) in paragraph at lines 431--431
+[14] [15]
+Overfull \hbox (13.48828pt too wide) in paragraph at lines 515--515
 []|\T1/lmr/bx/n/10 Bluetooth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
 \T1/lmr/bx/n/10 raz-li-
  []
 
-[12] [13]
-<connesione_doppia_enco.jpg, id=233, 1084.05pt x 1056.94875pt>
+[16] [17]
+<connesione_doppia_enco.jpg, id=284, 1084.05pt x 1056.94875pt>
 File: connesione_doppia_enco.jpg Graphic file (type jpg)
 <use connesione_doppia_enco.jpg>
-Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 466.
+Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 550.
 (pdftex.def)             Requested size: 360.0pt x 351.00366pt.
- [14] [15 <./connesione_doppia_enco.jpg>]
-<flipper.png, id=243, 800.9925pt x 702.625pt>
+ [18 <./connesione_doppia_enco.jpg>]
+<flipper.png, id=292, 800.9925pt x 702.625pt>
 File: flipper.png Graphic file (type png)
 <use flipper.png>
-Package pdftex.def Info: flipper.png  used on input line 485.
+Package pdftex.def Info: flipper.png  used on input line 569.
 (pdftex.def)             Requested size: 360.0pt x 315.79236pt.
- [16 <./flipper.png>]
-[17]
-Underfull \hbox (badness 1297) in paragraph at lines 535--535
+ [19] [20 <./flipper.png>]
+Underfull \hbox (badness 1297) in paragraph at lines 619--619
 []|\T1/lmr/m/n/10 Nikoli ne upo-ra-bljajte krat-kih PIN kod
  []
 
-[18] [19] (./porocilo.bbl) [20]
-\openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
-
-runsystem(latexminted clean  --timestamp 20260422222439 2625186A033BEFBA098DE70
-EC1FDEDA8)...executed safely (allowed).
-
- (./porocilo.aux)
+[21] [22] [23] (./porocilo.bbl) [24] (./porocilo.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: 8768351D435DE11CB490FB46FEFECC4E;5186.
+(rerunfilecheck)             Checksum: F7FA519E13F202C14548BEB4777BB84E;6541.
  ) 
 Here is how much of TeX's memory you used:
- 17656 strings out of 467533
- 338713 string characters out of 5422138
- 856531 words of memory out of 5000000
- 46238 multiletter control sequences out of 15000+600000
+ 17706 strings out of 467533
+ 339799 string characters out of 5422138
+ 856759 words of memory out of 5000000
+ 46275 multiletter control sequences out of 15000+600000
  699578 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,11n,93p,876b,1099s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,11n,93p,876b,1090s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/pub
@@ -777,10 +795,10 @@ r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt9.pfb>
-Output written on porocilo.pdf (21 pages, 628998 bytes).
+Output written on porocilo.pdf (25 pages, 1051110 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 248 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -207,10 +207,87 @@ Ta ukaz je precej podoben prejšnjemu za razliko od večjega števila paketov in
 Kot vidimo se vrednosti niso dosti povečale. Mogoče boste rekli da je 100 paketov premalo, zato sem preizkusil tudi z 2000 in 10000 paketov. Rezultati so bili približno enaki, povprečje mogoče za 10 ms višje ampak nobena napravi ni kazala nobenih znakov DoS napada. Največja zakasnitev paketa je imela naprava OPPO Find X5 pri 10000 paketih z 420.03 ms ampak povprečje je celo pri tej komunikaciji ostalo na 84.16 ms. Pri nobeni komunikaciji ni bil izgubljen niti en paket.
 
 \subsection{Analiza prometa v Wiresharku}
-Analizo prometa sem izvajal na napravi OPPO Find X5 z 10-timi ping paketi.
+Analizo prometa sem izvajal na napravi OPPO Find X5 z uporabo 10 ping paketov. 
+Da lahko razumemo, kako se povezava vzpostavi in kako se ti paketi prenašajo, 
+moramo najprej razumeti osnovno delovanje Bluetooth komunikacije.
+
+\subsubsection{Vzpostavitev povezave}
+Vzpostavitev povezave se zgodi na začetku komunikacije in je prikazana na sliki \ref{fig:handshake}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{handshake.png}
+	\caption{Vzpostavitev povezave}
+	\label{fig:handshake}
+\end{figure}
+
+Prvi paket, \texttt{Create Connection}, predstavlja zahtevo, ki jo moja naprava pošlje Bluetooth krmilniku z namenom vzpostavitve povezave s ciljno napravo (telefonom). Ta paket predstavlja začetno točko tako imenovanega ``handshake'' procesa.
+
+Sledijo odzivi krmilnika, ki potrjujejo in vzpostavljajo povezavo. Paket \texttt{Command Status} potrdi, da je krmilnik uspešno sprejel zahtevo za vzpostavitev povezave. Nato paket \texttt{Role Change} določi vloge naprav v povezavi, kjer ena naprava prevzame vlogo \textit{master}, druga pa \textit{slave}. 
+
+Na koncu paket \texttt{Connection Complete} potrdi, da je bila fizična povezava med napravama uspešno vzpostavljena in da sta napravi pripravljeni na nadaljnjo komunikacijo.
+
+\subsubsection{Izmenjava zmogljivosti in identifikacija naprave}
+Po uspešni vzpostavitvi fizične povezave sledi faza izmenjave zmogljivosti med napravama. V tej fazi si napravi izmenjata informacije o podprtih funkcionalnostih in lastnostih povezave.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{zmogljivost_identifikacija.png}
+	\caption{Zmogljivost in indentifikacija naprave}
+	\label{fig:zmogljivost_identifikacija}
+\end{figure}
 
 
 
+Najprej se izvedejo ukazi \texttt{Read Remote Supported Features} in \texttt{Read Remote Extended Features}, s katerimi ena naprava pridobi informacije o zmožnostih druge naprave, kot so podprti protokoli, načini prenosa in dodatne funkcionalnosti. Odgovori na te zahteve omogočajo optimizacijo nadaljnje komunikacije.
+
+Sledi ukaz \texttt{Remote Name Request}, s katerim naprava zahteva ime ciljne naprave. Ta korak je pomemben za identifikacijo naprave v omrežju.
+
+Po tem se izvedejo še dodatne prilagoditve povezave, kot so:
+\begin{itemize}
+	\item \texttt{Max Slots Change} – določa število časovnih rež za prenos podatkov,
+	\item \texttt{Connection Packet Type Changed} – določa vrsto paketov, ki se bodo uporabljali,
+	\item \texttt{Link Supervision Timeout Changed} – nastavi časovno omejitev za zaznavo prekinitve povezave.
+\end{itemize}
+
+Ta faza zagotovi, da sta napravi usklajeni glede zmogljivosti in parametrov povezave, kar omogoča zanesljivo nadaljnjo komunikacijo.
+
+\subsubsection{Vzpostavitev L2CAP komunikacije in prenos podatkov}
+Po zaključeni izmenjavi osnovnih zmogljivosti se komunikacija premakne na višji nivo, kjer se uporablja protokol L2CAP (Logical Link Control and Adaptation Protocol).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{l2cap_wireshark.png}
+	\caption{L2CAP komunikacija}
+	\label{fig:l2cap_wireshark}
+\end{figure}
+
+V začetni fazi si napravi izmenjata \texttt{Information Request} in \texttt{Information Response} pakete. Ti paketi vsebujejo informacije o podprtih L2CAP funkcionalnostih, kot so razširjene zmožnosti (Extended Features Mask) in podprti fiksni kanali (Fixed Channels Supported). Na podlagi teh informacij napravi določita način logične komunikacije ter parametre prenosa podatkov.
+
+Ko je L2CAP plast ustrezno konfigurirana, se začne dejanska komunikacija med napravama. V našem primeru gre za pošiljanje \textit{ping} paketov z uporabo L2CAP \texttt{Echo Request} in \texttt{Echo Response} mehanizma.
+
+Naprava pošlje paket \texttt{Echo Request}, ki vsebuje določeno podatkovno vsebino (payload). Ciljna naprava na ta paket odgovori z \texttt{Echo Response}, pri čemer vrne enako vsebino nazaj pošiljatelju. Ta mehanizem omogoča preverjanje dosegljivosti naprave in merjenje zakasnitve v komunikaciji.
+
+Na podlagi časovne razlike med poslanim zahtevkom in prejetim odgovorom lahko izračunamo čas krožnega potovanja (RTT – Round Trip Time), ki predstavlja pomemben kazalnik zmogljivosti povezave.
+
+V zajetem prometu opazimo več zaporednih parov \texttt{Echo Request} in \texttt{Echo Response}, kar ustreza izvajanju ukaza \texttt{l2ping}. Poleg tega se med posameznimi zahtevki izvajajo tudi dodatni ukazi, kot sta \texttt{Read RSSI} in \texttt{Read TX Power Level}, ki omogočajo spremljanje kakovosti povezave med komunikacijo.
+
+Ta faza predstavlja glavni del prenosa podatkov in praktično uporabo vzpostavljene Bluetooth povezave.
+
+\subsubsection{Zaključek povezave}
+Po končani komunikaciji se povezava med napravama ustrezno prekine. Ta proces se začne z ukazom \texttt{Disconnect}, ki ga gostitelj (host) pošlje krmilniku z namenom prekinitve obstoječe povezave.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{disconect.png}
+	\caption{Prekinitev povezave}
+	\label{fig:disconect}
+\end{figure}
+
+
+Najprej se pojavi paket \texttt{Command Status (Disconnect)}, ki potrdi, da je krmilnik sprejel zahtevo za prekinitev povezave. Nato sledi paket \texttt{Disconnect Complete}, ki označuje, da je bila povezava uspešno prekinjena.
+
+Ta faza zagotavlja pravilno in kontrolirano zapiranje povezave, s čimer se sprostijo uporabljeni viri in preprečijo morebitne napake ali nedoslednosti v nadaljnji komunikaciji.
 
 
 \section{Tipi napadov na bluetooth naprave}
