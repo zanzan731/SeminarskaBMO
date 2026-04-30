@@ -1,0 +1,28 @@
+# vim
+*.swp
+
+*~
+
+# compiled python
+*.pyc
+
+# ctags
+tags
+
+# internalblue
+_internalblue.hist
+_internalblue.log
+btsnoop.log
+
+# xcode
+xcuserdata
+*.xcworkspace
+macos/IOBluetoothExtended.framework/
+
+# venv
+venv
+venv3
+
+# pycharm
+*.idea
+*.egg-info

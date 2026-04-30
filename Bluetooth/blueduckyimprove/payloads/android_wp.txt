@@ -1,0 +1,41 @@
+DELAY 2000
+REM Open Browser
+GUI b
+DELAY 2000
+
+REM Focus Address Bar
+CTRL l
+DELAY 1000
+
+REM Type URL
+STRING https://wa.me/6282298594676
+DELAY 1000
+ENTER
+DELAY 6000
+
+REM Navigasi di halaman "wa.me" Android (Klik tombol Continue/Open)
+REM Kita coba pake 1 atau 2 TAB buat nyari tombolnya
+TAB
+DELAY 500
+TAB
+DELAY 500
+ENTER
+
+REM Tunggu WhatsApp kebuka sempurna
+DELAY 6000
+
+REM Ketik Pesan
+STRING tes 123 bluedcuky
+DELAY 1000
+
+REM Android WhatsApp: ENTER seringkali cuma "New Line"
+REM Kita perlu TAB buat nyari tombol "Send"
+TAB
+DELAY 500
+ENTER
+DELAY 2000
+
+STRING Mission Accomplished!
+TAB
+DELAY 500
+ENTER

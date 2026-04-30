@@ -1,0 +1,6 @@
+REM Enable Developer Options
+DELAY 2000
+
+REM Open Settings
+GUI i
+DELAY 500

@@ -1,0 +1,19 @@
+REM Open Rickroll in fullscreen
+DELAY 2000
+
+REM Open Run dialog
+GUI r
+DELAY 500
+
+REM Launch Rickroll URL
+STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ENTER
+DELAY 3000
+
+REM F11 for fullscreen
+ALT F4
+GUI r
+DELAY 500
+STRING powershell (New-Object -ComObject WScript.Shell).SendKeys('{F11}')
+ENTER
+DELAY 1000
