@@ -64,6 +64,8 @@ Končno poročilo seminarske naloge\\
 
 Žan Perat\\
 Vpisna št. 63230239\\
+Klemen Pregelj\\
+Vpisna št. 63230263\\
 
 \vspace*{5cm}
 Ljubljana, \today
@@ -97,8 +99,40 @@ Kratek opis uporabljene strojne in programske opreme.
 
 
 
+\section{Moč signala glede na oddaljenost in število naprav}
+V tem poglavju analiziramo odvisnost moči brezžičnega signala (\texttt{RSSI}) od oddaljenosti ter vpliv števila aktivnih naprav v prostoru.
 
+Vse meritve so bile izvedene večkrat z namenom zmanjšanja vpliva naključnih odstopanj. Vsaka posamezna meritev je bila ponovljena petkrat, končna vrednost \texttt{RSSI} pa je bila izračunana kot povprečje teh meritev.
 
+Za zajem podatkov smo uporabili Python skripto z uporabo knjižnice \texttt{Bleak}, ki omogoča skeniranje \texttt{BLE} naprav.
+
+\subsection{Moč signala v prostoru}
+Na Sliki \ref{fig:heatmap} je prikazana toplotna karta (angl. \texttt{heatmap}) jakosti signala v prostoru dimenzij 3 × 3,5 m. Opazimo lahko, da je moč signala največja v bližini dostopne točke ter postopoma upada z večanjem oddaljenosti. Na moč signala imajo velik vpliv tudi ovire v prostoru in odboji od sten, saj vidimo območja kjer signal nenadoma upade.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{heatmap.png}
+	\caption{\texttt{RSSI} toplotna karta v prostoru}
+	\label{fig:heatmap}
+\end{figure}
+
+\subsection{Vpliv števila naprav na moč signala}
+Na Sliki \ref{fig:stnaprav} je prikazana odvisnost \texttt{RSSI} od oddaljenosti in števila naprav. Rezultati kažejo jasno negativno korelacijo med \texttt{RSSI} in oddaljenostjo, kar je skladno s teoretičnimi modeli širjenja radijskih valov.
+
+Vpliv števila naprav na \texttt{RSSI} pa ni tak, kot bi morda pričakovali. Iz grafa je razvidno, da se \texttt{RSSI} pri povečevanju števila naprav ne zmanjšuje monotono, temveč se vrednosti naključno spreminjajo. To lahko pripišemo več dejavnikom:
+
+\begin{itemize}
+	\item \texttt{RSSI} meri moč sprejetega signala, ne pa kakovosti povezave ali zasičenosti kanala,
+	\item dodatne naprave vplivajo predvsem na zasedenost medija (interferenco, kolizije), ne nujno neposredno na izmerjeno moč signala,
+	\item merilni šum in variabilnost okolja (premiki, odboji, večpotno širjenje) lahko povzročijo nihanja meritev.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{stNaprav_heatmap.png}
+	\caption{vpliv števila naprav in oddaljenosti na \texttt{RSSI}}
+	\label{fig:stnaprav}
+\end{figure}
+
+Na podlagi rezultatov lahko zaključimo, da je oddaljenost glavni dejavnik, ki vpliva na upad \texttt{RSSI}, medtem ko število naprav v opazovanem eksperimentu ni imelo sistematičnega vpliva na izmerjeno moč signala, temveč predvsem na variabilnost meritev.
 
 
 
@@ -666,7 +700,13 @@ Starejše naprave (npr. Samsung Galaxy Ace S5830) so ranljive za PIN brute force
 
 
 \section{Zaključek}
-Ali ste izpolnili cilje in možne nadaljne nadgradnje. Pri samem opisu rešitve se običajno sklicujemo na reference, npr. \cite{cisco}. 
+V seminarski nalogi smo celovito raziskali področje varnosti Bluetooth tehnologije, od osnovnih meritev signala do naprednih metod vdora. Skozi praktično delo smo ugotovili, da moč signala (\texttt{RSSI}) sicer upada z razdaljo, vendar število naprav v okolici ne vpliva nujno na moč, temveč predvsem na variabilnost in stabilnost povezave.
+
+Analiza prometa z orodjem Wireshark je omogočila podroben vpogled v L2CAP protokol in "handshake" proces. Ugotovljeno je bilo, da lahko že majhne nepravilnosti v implementaciji protokola (kot so bili \textit{malformed packets} pri starejšem Samsungu) povzročijo težave v komunikaciji, kar lahko napadalci izkoristijo za DoS napade.
+
+Najučinkovitejša in hkrati najbolj skrb vzbujajoča je bila demonstracija napada CVE-2023-45866. Dejstvo, da lahko napadalec brez kakršne koli interakcije uporabnika prevzame nadzor nad vnosom tipkovnice, kaže na resnost Bluetooth ranljivosti. Čeprav so sodobni sistemi načeloma popravljeni, kombinacija s tehnikami, kot je MAC spoofing, dokazuje, da popolne varnosti ni – še posebej, če napadalec izkoristi vnaprej vzpostavljeno zaupanje med napravami.
+
+Naloga je potrdila začetno hipotezo: Bluetooth je izjemno priročen, a hkrati varnostno tvegan protokol. Za povprečnega uporabnika je ključno zavedanje, da Bluetooth vmesnik predstavlja odprta vrata v napravo, ki jih je treba odpirati preudarno in le takrat, ko je to nujno potrebno. Pridobljeno znanje bo služilo kot osnova za nadaljnje raziskovanje brezžičnih tehnologij in kibernetske varnosti.
 
 \pagebreak
 \bibliographystyle{plain}
