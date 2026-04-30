@@ -1,0 +1,4 @@
+hciconfig -a 
+rfkill list
+rfkill unblock bluetooth
+hciconfig hci0 up

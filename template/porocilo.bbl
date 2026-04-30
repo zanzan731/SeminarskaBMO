@@ -1,8 +1,72 @@
 \begin{thebibliography}{1}
 
-\bibitem{cisco}
-Web source.
-\newblock Cisco routers documentation.
-\newblock \url{http://www.cisco.com/}.
+\bibitem{bluetooth-security-fundamentals}
+DevAcademy.
+\newblock Bluetooth security fundamentals.
+\newblock
+  \url{https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/lessons/lesson-5-bluetooth-le-security-fundamentals/topic/pairing-process/}.
+\newblock Razlaga pairing procesa.
+
+\bibitem{wireshark}
+Wireshark Foundation.
+\newblock Wireshark.
+\newblock \url{https://www.wireshark.org/}.
+\newblock Uradna spletna stran priljubljenega orodja za analizo omrežnega
+  prometa.
+
+\bibitem{cve2023-45866}
+{National Vulnerability Database (NVD)}.
+\newblock Cve-2023-45866.
+\newblock \url{https://nvd.nist.gov/vuln/detail/CVE-2023-45866}.
+\newblock Ranljivost v BlueZ (Linux Bluetooth sklad), ki omogoča
+  neavtenticirani HID napravi vzpostavitev šifrirane povezave in injiciranje
+  pritiskov tipk brez posredovanja uporabnika.
+
+\bibitem{cve2025-20695}
+{National Vulnerability Database (NVD)}.
+\newblock Cve-2025-20695.
+\newblock \url{https://nvd.nist.gov/vuln/detail/CVE-2025-20695}.
+\newblock Ranljivost v Bluetooth vdelani programski opremi (firmware) –
+  oddaljena zavrnitev storitve (DoS) zaradi neujete izjeme. Prizadete naprave z
+  Android 13–15 in Mediatek SDK.
+
+\bibitem{bluebugging}
+Husain Parvez and Ata Hakçıl.
+\newblock What is bluebugging? how bluetooth attacks work and how to prevent
+  them.
+\newblock \url{https://www.expressvpn.com/blog/bluebugging/}.
+\newblock Podroben opis bluebugging napada, njegovega delovanja, zgodovine ter
+  zaščite pred njim.
+
+\bibitem{blueducky}
+pentestfunctions.
+\newblock Blueducky.
+\newblock \url{https://github.com/pentestfunctions/BlueDucky}.
+\newblock Orodje za izkoriščanje ranljivosti CVE-2023-45866 za injiciranje
+  pritiskov tipk prek Bluetooth HID.
+
+\bibitem{bleedingtooth}
+{Red Hat Customer Portal}.
+\newblock Bleedingtooth – kernel bluetooth vulnerabilities.
+\newblock
+  \url{https://access.redhat.com/security/vulnerabilities/BleedingTooth}.
+\newblock Zbirka napak v Linux kernelu (CVE-2020-12351, CVE-2020-12352,
+  CVE-2020-24490), ki omogočajo padec sistema, izvedbo poljubne kode ali
+  uhajanje podatkov.
+
+\bibitem{bluetooth-handshake}
+Bluetooth Special Interest~Group (SIG).
+\newblock Bluetooth l2cap connection establishment and handshake process.
+\newblock
+  \url{https://www.bluetooth.com/specifications/specs/core-specification-5-3/}.
+\newblock Uradna specifikacija Bluetooth Core, ki podrobno opisuje L2CAP
+  protokol in vzpostavitev povezave.
+
+\bibitem{bluesnarfing}
+{Wikipedia}.
+\newblock Bluesnarfing.
+\newblock \url{https://en.wikipedia.org/wiki/Bluesnarfing}.
+\newblock Nepooblaščen dostop do podatkov prek Bluetooth povezave z
+  izkoriščanjem protokola OBEX.
 
 \end{thebibliography}

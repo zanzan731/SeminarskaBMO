@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: porocilo.aux
 The style file: plain.bst
 Database file #1: references.bib
-You've used 1 entry,
+You've used 9 entries,
             2118 wiz_defined-function locations,
-            501 strings with 4068 characters,
-and the built_in function-call counts, 224 in all, are:
-= -- 19
-> -- 7
+            541 strings with 6155 characters,
+and the built_in function-call counts, 1973 in all, are:
+= -- 192
+> -- 69
 < -- 0
-+ -- 3
-- -- 2
-* -- 7
-:= -- 43
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
++ -- 29
+- -- 20
+* -- 51
+:= -- 339
+add.period$ -- 36
+call.type$ -- 9
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 7
-empty$ -- 23
-format.name$ -- 2
-if$ -- 46
+cite$ -- 9
+duplicate$ -- 63
+empty$ -- 199
+format.name$ -- 20
+if$ -- 431
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 9
 missing$ -- 0
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 8
+newline$ -- 57
+num.names$ -- 18
+pop$ -- 91
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 28
 quote$ -- 0
-skip$ -- 8
+skip$ -- 46
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 45
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 36
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 11
+while$ -- 18
+width$ -- 10
+write$ -- 101

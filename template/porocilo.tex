@@ -18,7 +18,10 @@
 \usepackage{tabularx}
 \usepackage{float}
 \usepackage{minted}
+\usepackage{xcolor}
 \usepackage[official]{eurosym}
+\usepackage{array}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -86,18 +89,16 @@ Ljubljana, \today
 \section{Uvod in motivacija}
 Bluetooth tehnologija je danes vgrajena v ogromno število naprav – od pametnih telefonov in prenosnikov do brezžičnih slušalk, mikrofonov in pametnih ur. Kljub njeni razširjenosti pa se marsikdo ne zaveda varnostnih tveganj, ki jih prinaša. Do sedaj si še nisem vzel časa, da bi se poglobljeno ukvarjal z Bluetooth tehnologijo in njenimi ranljivostmi. Zato sem se odločil, da to področje temeljito raziščem in pri tem pridobim nova znanja ter praktične izkušnje.
 
-V okviru te seminarske naloge sem se srečal z različnimi orodji za delo z Bluetooth napravami, kot so \texttt{hciconfig}, \texttt{hcitool}, \texttt{l2ping} in \texttt{bluesnarfer}. Naučil sem se iskati bližnje naprave (mikrofone, slušalke, pametne telefone) ter meriti moč in kakovost signala glede na oddaljenost in število povezanih naprav. Z ukazom \texttt{l2ping} sem generiral L2CAP echo promet in meril zakasnitve (latenco) za posamezne naprave ter preverjal, kako dodaten promet vpliva na njihovo delovanje. Generirani promet sem zajel in analiziral z orodjem Wireshark.
+V okviru te seminarske naloge sem se srečal z različnimi orodji za delo z Bluetooth napravami, kot so \texttt{hciconfig}, \texttt{hcitool}, \texttt{l2ping} in \texttt{bluesnarfer}. Naučil sem se iskati bližnje naprave (mikrofone, slušalke, pametne telefone) ter meriti moč in kakovost signala glede na oddaljenost in število povezanih naprav. Z ukazom \texttt{l2ping} sem generiral L2CAP echo promet in meril zakasnitve (latenco) za posamezne naprave ter preverjal, kako dodaten promet vpliva na njihovo delovanje. Generirani promet sem zajel in analiziral z orodjem Wireshark~\cite{wireshark}.
 
 Poleg meritev sem preučil tudi različne tipe Bluetooth napadov. V praktičnem delu sem demonstriral tudi različne vrste napadov in preveril, kakšni napadi so sploh možni. Na koncu sem opisal še različne načine zaščite Bluetooth povezav. Vsi eksperimenti so potekali izključno na lastnih napravah, kar mi je omogočilo varno in nadzorovano testiranje.
 
+Vsa izvorna koda in zajeti podatki so dostopni v Github repozitoriju: \url{https://github.com/zanzan731/SeminarskaBMO}
+
 Cilj naloge ni bil le opraviti predpisane meritve, ampak predvsem razumeti ozadje delovanja Bluetootha in se naučiti prepoznati ter preprečiti morebitne napade.
 
-\section{Opis uporabljene strojne in programske opreme}
-Kratek opis uporabljene strojne in programske opreme.
 
-
-
-
+\newpage
 
 \section{Moč signala glede na oddaljenost in število naprav}
 V tem poglavju analiziramo odvisnost moči brezžičnega signala (\texttt{RSSI}) od oddaljenosti ter vpliv števila aktivnih naprav v prostoru.
@@ -107,7 +108,7 @@ Vse meritve so bile izvedene večkrat z namenom zmanjšanja vpliva naključnih o
 Za zajem podatkov smo uporabili Python skripto z uporabo knjižnice \texttt{Bleak}, ki omogoča skeniranje \texttt{BLE} naprav.
 
 \subsection{Moč signala v prostoru}
-Na Sliki \ref{fig:heatmap} je prikazana toplotna karta (angl. \texttt{heatmap}) jakosti signala v prostoru dimenzij 3 × 3,5 m. Opazimo lahko, da je moč signala največja v bližini dostopne točke ter postopoma upada z večanjem oddaljenosti. Na moč signala imajo velik vpliv tudi ovire v prostoru in odboji od sten, saj vidimo območja kjer signal nenadoma upade.
+Na sliki \ref{fig:heatmap} je prikazana toplotna karta (angl. heatmap) jakosti signala v prostoru dimenzij 3 × 3,5 m. Dostopna točka se nahaja na mestu A3. Opazimo, da je signal najmočnejši v njeni bližini ter postopoma slabi z naraščajočo oddaljenostjo. Na porazdelitev moči pomembno vplivajo tudi ovire in odboji od sten, kar se kaže v območjih z nenadnimi padci signala.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{heatmap.png}
@@ -134,10 +135,7 @@ Vpliv števila naprav na \texttt{RSSI} pa ni tak, kot bi morda pričakovali. Iz 
 
 Na podlagi rezultatov lahko zaključimo, da je oddaljenost glavni dejavnik, ki vpliva na upad \texttt{RSSI}, medtem ko število naprav v opazovanem eksperimentu ni imelo sistematičnega vpliva na izmerjeno moč signala, temveč predvsem na variabilnost meritev.
 
-
-
-
-
+\newpage
 
 \section{L2ping in analiza prometa}
 V tem delu se bomo spoznali z \texttt{l2ping} in preučili osnove bluetootha.
@@ -189,33 +187,39 @@ Ta tabela prikazuje odgovore na ping pakete v idelnem okolju. Za generiranje vel
 	sudo l2ping -c 100 -i hci0 -f <MAC address>
 \end{verbatim}
 
-Ta ukaz je precej podoben prejšnjemu za razliko od večjega števila paketov in dodatno zastavico -f, ki pomeni flood (pošlji pakete brez zakasnitve). Tukaj je tudi računanje povprečja precej nadležno, saj l2ping ne sam izpisuje teh podatkov zato sem si pomagal z naslednjim pyhon programom:
-
-\begin{minted}[linenos, frame=single, breaklines]{python}
+Ta ukaz je precej podoben prejšnjemu za razliko od večjega števila paketov in dodatno zastavico -f, ki pomeni flood (pošlji pakete brez zakasnitve). Tukaj je tudi računanje povprečja precej nadležno, saj \texttt{l2ping} ne sam izpisuje teh podatkov zato sem si pomagal z naslednjim pyhon programom:
+\begin{minted}[
+	linenos,
+	frame=lines,
+	framesep=6pt,
+	baselinestretch=1.1,
+	fontsize=\small,
+	bgcolor=gray!5,
+	breaklines,
+	tabsize=4
+	]{python}
 	import subprocess
 	import re
 	
 	def ping_bluetooth(mac_address, count=100, device="hci0"):
 		cmd = ['l2ping', '-c', str(count), '-i', str(device), '-f', mac_address]
 		result = subprocess.run(cmd, capture_output=True, text=True)
-		
+	
 		times = []
 		for line in result.stdout.split('\n'):
 			match = re.search(r'time\s+([\d\.]+)ms', line)
 			if match:
 				times.append(float(match.group(1)))
-			
+	
 		if times:
 			print(f"Min: {min(times):.2f} ms")
 			print(f"Avg: {sum(times)/len(times):.2f} ms")
 			print(f"Max: {max(times):.2f} ms")
 		else:
 			print("No ping responses received.")
-		
-	ping_bluetooth('70:28:8B:B8:29:57')
 	
+	ping_bluetooth('70:28:8B:B8:29:57')
 \end{minted}
-
 
 \begin{table}[H]
 	\centering
@@ -257,7 +261,7 @@ Vzpostavitev povezave se zgodi na začetku komunikacije in je prikazana na sliki
 
 Prvi paket, \texttt{Create Connection}, predstavlja zahtevo, ki jo moja naprava pošlje Bluetooth krmilniku z namenom vzpostavitve povezave s ciljno napravo (telefonom). Ta paket predstavlja začetno točko tako imenovanega ``handshake'' procesa.
 
-Sledijo odzivi krmilnika, ki potrjujejo in vzpostavljajo povezavo. Paket \texttt{Command Status} potrdi, da je krmilnik uspešno sprejel zahtevo za vzpostavitev povezave. Nato paket \texttt{Role Change} določi vloge naprav v povezavi, kjer ena naprava prevzame vlogo \textit{master}, druga pa \textit{slave}. 
+Sledijo odzivi krmilnika, ki potrjujejo in vzpostavljajo povezavo. Paket \texttt{Command Status} potrdi, da je krmilnik uspešno sprejel zahtevo za vzpostavitev povezave. Nato paket \texttt{Role Change} določi vloge naprav v povezavi, kjer ena naprava prevzame vlogo \textit{master}, druga pa \textit{slave}. Naprava v vlogi \textit{master} upravlja komunikacijo, določa časovne intervale in usklajuje izmenjavo podatkov, medtem ko \textit{slave} sledi njenim zahtevam ter odgovarja na prejete ukaze.
 
 Na koncu paket \texttt{Connection Complete} potrdi, da je bila fizična povezava med napravama uspešno vzpostavljena in da sta napravi pripravljeni na nadaljnjo komunikacijo.
 
@@ -334,10 +338,11 @@ Najprej se pojavi paket \texttt{Command Status (Disconnect)}, ki potrdi, da je k
 
 Ta faza zagotavlja pravilno in kontrolirano zapiranje povezave, s čimer se sprostijo uporabljeni viri in preprečijo morebitne napake ali nedoslednosti v nadaljnji komunikaciji.
 
+\newpage
 
 \section{Tipi napadov na bluetooth naprave}
 \subsection{BlueSnarfing}
-BlueSnarfing je neavtoriziran dostop do informacij na brezžični napravi prek Bluetooth povezave. Ta napad omogoča pridobitev dostopa do koledarja, telefonskega imenika, e-pošte, SMS sporočil in drugih osebnih podatkov. Pogosto izkorišča profil OBEX Push (Object Exchange), ki ob nepravilni konfiguraciji razkrije podatke brez potrditve uporabnika.
+BlueSnarfing je neavtoriziran dostop do informacij na brezžični napravi prek Bluetooth povezave~\cite{bluesnarfing}. Ta napad omogoča pridobitev dostopa do koledarja, telefonskega imenika, e-pošte, SMS sporočil in drugih osebnih podatkov. Pogosto izkorišča profil OBEX Push (Object Exchange), ki ob nepravilni konfiguraciji razkrije podatke brez potrditve uporabnika.
 
 \subsection{MAC address spoofing}
 Ta napad se lahko zgodi, ko se napravi dogovarjata za varne ključe, s katerimi bosta komunicirali, torej mora biti napadalec že na začetku prisoten. Napadalec ponaredi (spoofa) MAC naslov zaupanja vredne naprave in tako prelisiči ciljno napravo, da se poveže z njegovo namesto s prvotno napravo. S tem lahko prestreže komunikacijo ali se lažno avtenticira, ne da bi razkril svoj pravi naslov.
@@ -352,13 +357,15 @@ Do reflection napada pride, ko napadalec prestreže avtentikacijske podatke (npr
 Pri tem napadu napadalec poskuša prekiniti povezavo med dvema napravama ali narediti Bluetooth vmesnik popolnoma neuporaben. To doseže s pošiljanjem velikega števila paketov (npr. zahtevkov L2CAP, SDP ali praznih paketov), kar povzroči preobremenitev in sesutje Bluetooth kopice. Posledično naprava ne more več vzpostavljati novih povezav ali pa se obstoječe prekinejo.
 
 \subsection{Bluejacking}
-Bluejacking je pošiljanje nezaželenih sporočil prek Bluetootha. Napadalec uporabi protokol OBEX (lahek komunikacijski protokol za pošiljanje binarnih datotek), da pošlje kratko sporočilo svojemu imeniku, ki se prikaže na zaslonu žrtve. Čeprav je bluejacking večinoma nedolžna potegavščina, se lahko zlorabi za namene socialnega inženiringa ali širjenja zlonamerne vsebine.
+Bluejacking je pošiljanje nezaželenih sporočil prek Bluetootha. Napadalec uporabi protokol OBEX (lahek komunikacijski protokol za pošiljanje binarnih datotek), da pošlje kratko sporočilo, ki se prikaže na zaslonu žrtve. Čeprav je bluejacking večinoma nedolžna potegavščina, se lahko zlorabi za namene socialnega inženiringa ali širjenja zlonamerne vsebine.
 
 \subsection{Bluesmacking}
 Bluesmacking je oblika DoS napada, specifična za Bluetooth. Napadalec pošlje veliko število lažnih zahtevkov L2CAP echo (ping) na ciljno napravo, ki jih ta ne more pravilno obdelati. To povzroči preobremenitev procesorja in posledično izpad Bluetooth storitev.
 
 \subsection{PIN Brute Force}
 Pri starejših napravah z Bluetooth 2.0 in nižje se uporablja kratek PIN (običajno 4–6 števk). Napadalec lahko s prisluškovanjem parjenju prestreže izmenjane pakete in nato s programom (npr. `btcrack`) poskusi vse možne kombinacije PIN kode. Ko jo odkrije, lahko izračuna skupne ključe in dešifrira celotno komunikacijo.
+
+\newpage
 
 \section{Eksperimentalna analiza Bluetooth napadov}
 V tem delu smo preučili različne bluetooth napade na različnih napravah.
@@ -469,7 +476,7 @@ Orodje \texttt{bluetoothctl} je danes standardni način za upravljanje Bluetooth
 Orodje \texttt{sdptool} je danes označeno kot zastarelo in ga v sodobnih distribucijah Linuxa nadomeščata orodji \texttt{bluetoothctl} in \texttt{btmgmt}. Kljub temu pa ostaja uporabno za poglobljeno diagnostiko in razumevanje protokola SDP, zlasti pri starejših napravah in sistemih.
 
 \subsection{Še nekaj osnovnih ukazov}
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\small
 	\renewcommand{\arraystretch}{1.2}
@@ -483,7 +490,7 @@ Orodje \texttt{sdptool} je danes označeno kot zastarelo in ga v sodobnih distri
 		\hline
 		\texttt{hciconfig hci0 down} & Deaktivira (izklopi) Bluetooth vmesnik \texttt{hci0}. \\
 		\hline
-		\texttt{hciconfig hci0 reset} & Ponastavi Bluetooth vmesnik \texttt{hci0}. Uporabno, kadar adapter ne odziva pravilno. \\
+		\texttt{hciconfig hci0 reset} & Ponastavi Bluetooth vmesnik \texttt{hci0}. Uporabno, kadar se adapter ne odziva pravilno. \\
 		\hline
 		\texttt{hciconfig hci0 name "ime"} & Spremeni lokalno ime Bluetooth naprave (prikazano ob skeniranju). \\
 		\hline
@@ -515,7 +522,7 @@ Ta napad sem testiral na treh telefonskih napravah in sicer:
 \end{itemize}
 
 Mogoče poznate Rubber Ducky, to je USB ključek, ki na površini zgleda kot vsak drug ključek, ampak ko ga priključiš v računalnik se predstavlja kot da je human interface device (npr. tipkovnica) in začne izvajati neko kodo, ker je računalnik narejen tako da zaupa človeku to kodo izvede. Kaj če bi to lahko naredil kdorkoli samo z dostopom do bluetootha? Izkaže se da s CVE-2023-45866 lahko točno to dosežemo.
-Napisal sem 2 bolj enostavna skripta za Rubber ducky in uporabil malo prilagojeno kodo BlueDucky (\url{https://github.com/pentestfunctions/BlueDucky}) en od teh skriptov je bolj satiričen in sicer predvaja pesem Rick Astley - Never gonna give you up, drugi pa gre v nastavitve telefona.
+Napisal sem 2 bolj enostavna skripta za Rubber ducky in uporabil malo prilagojeno kodo BlueDucky~\cite{blueducky, cve2023-45866} en od teh skriptov je bolj satiričen in sicer predvaja pesem Rick Astley - Never gonna give you up, drugi pa gre v nastavitve telefona.
 
 \begin{verbatim}
 	REM Rickroll Android
@@ -537,7 +544,7 @@ Napisal sem 2 bolj enostavna skripta za Rubber ducky in uporabil malo prilagojen
 	
 	
 \end{verbatim}
-Seveda ukaz kot je \texttt{GUI i} je na vsakem telefonu bil drugačen. Ta specifičen je napisan za OPPO Find X5, pri katerem je sistemski jezik v italjanščina.
+Seveda ukaz kot je \texttt{GUI i} je na vsakem telefonu bil drugačen. Ta specifičen skript je napisan za OPPO Find X5, pri katerem je sistemski jezik v italjanščini.
 
 \subsubsection{Rezultati testiranja}
 
@@ -547,13 +554,13 @@ Za vsako od treh naprav sem poskusil izvesti dva različna DuckyScripta: prvi je
 	\centering
 	\small
 	\renewcommand{\arraystretch}{1.2}
-	\begin{tabularx}{\linewidth}{|l|X|c|c|}
+	\begin{tabularx}{\linewidth}{|l|Y|c|c|}
 		\hline
-		\textbf{Naprava} & \textbf{Bluetooth različica} & \textbf{Rickroll} & \textbf{Odpiranje nastavitev} \\
+		\textbf{Naprava} & \textbf{BT različica} & \textbf{Rickroll} & \textbf{Odpiranje nastavitev} \\
 		\hline
-		OPPO Find X5 & 5.3 & Uspelo & Uspelo \\
+		OPPO Find X5 & 5.3 & Uspešno & Uspešno \\
 		\hline
-		Samsung Galaxy S7 edge & 4.2 & Uspelo & Uspelo \\
+		Samsung Galaxy S7 edge & 4.2 & Uspešno & Uspešno \\
 		\hline
 		Samsung Galaxy Ace S5830 & 3.0 & Neuspešno & Neuspešno \\
 		\hline
@@ -566,11 +573,11 @@ Pri obeh novejših napravah (OPPO Find X5 in Samsung S7 edge) je napad deloval b
 
 Omeniti velja, da je bila ranljivost CVE-2023-45866 v času testiranja že uradno popravljena (patched). Pred popravkom pa napad sploh ni zahteval predhodnega seznanjanja – dovolj je bilo, da je napadalec vzpostavil HID povezavo brez kakršne koli predhodne interakcije z uporabnikom.
 
-Kaj pa če bi želeli celo da naprava ne bi nikoli (niti enkrat v preteklosti) potrdila zahtevka za parjanje? Ali bi lahko s katerekoli naprave naredili, da ti telefon oziroma naprava kar dovoli dostop tudi po tem, ko je že bila patched. Žalosten odgovor je da je to še kako možno. Za to rabimo še en napad, ki sem ga opisal na začetku in sicer MAC address spoofing. S tem smo ponaredili MAC address naprave, ki smo jo enkrat že potrdili (npr. brezžične slušalke ali pametna ura), ker je bila ta naprava že potrjena se telefon brez kakršnekoli nove potrditve poveže in izvede kodo. Moremo poudariti, da je MAC spoofing zelo preprost, sicer ne podpira vsak hardware ampak podpira pa skori vsak USB ključek, ki ga kupiš v kakršnikoli trgovini, ki prodaja elektroniko. Ta spoofing napad sem tudi lahko naredil s samo enim ukazom: 
+Kaj pa če bi želeli celo da naprava ne bi nikoli (niti enkrat v preteklosti) potrdila zahtevka za parjanje? Ali bi bilo mogoče s katerokoli napravo doseči, da telefon oziroma druga naprava dovoli dostop tudi po tem, ko je bila ranljivost že odpravljena (patchana)? Žalosten odgovor je, da je to še kako možno. Za to rabimo še en napad, ki sem ga opisal na začetku in sicer MAC address spoofing. S tem smo ponaredili MAC address naprave, ki smo jo enkrat že potrdili (npr. brezžične slušalke ali pametna ura), ker je bila ta naprava že potrjena se telefon brez kakršnekoli nove potrditve poveže in izvede kodo. Moremo poudariti, da je MAC spoofing zelo preprost, sicer ne podpira vsak hardware ampak podpira pa skori vsak USB ključek, ki ga kupiš v kakršnikoli trgovini, ki prodaja elektroniko. Ta spoofing napad sem tudi lahko naredil z enim samim ukazom: 
 \begin{verbatim}
 		spooftooph -i hci1 -a 2C:4D:79:78:2F:D7 -n "OPPO Enco X2"
 \end{verbatim}
-Če pa ima napadalec malo bolj napredno opremo, kot je Ubertooth One potem pa sploh nima nobenega problema dobiti MAC address kakršnekoli naprave. Naprimer če si povezan s slušalkami teh slušalk načeloma druge naprave v okolici ne bojo zaznale saj ne oglašuje svoje prisotnosti več, ampak z Ubertooth one lahko prisluškuješ tej povezavi in iz tam razbereš MAC naslov, ki ga lahko kasneje uporabiš za ta napad.
+Če pa ima napadalec naprednejšo opremo, kot je Ubertooth One, lahko brez večjih težav pridobi MAC naslov naprav v okolici. Na primer, ko so slušalke že povezane s telefonom, običajno ne oglašujejo več svoje prisotnosti, zato jih druge naprave ne zaznajo. Z napravo Ubertooth One pa je mogoče prisluškovati Bluetooth prometu in iz izmenjave podatkov razbrati MAC naslov, ki ga je nato mogoče uporabiti pri nadaljnjih napadih.
 
 Pri najstarejši napravi, Samsung Galaxy Ace S5830 (Bluetooth 3.0), napad ni uspel. Telefon se ni odzval na poskuse vzpostavitve HID povezave. Razlog je v tem, da ta naprava podpira le zelo omejen nabor Bluetooth storitev in profilov – med drugim ne ponuja profila HID (Human Interface Device) prek Bluetootha. Poleg tega ima odprtih le nekaj RFCOMM kanalov (predvsem za Headset in Handsfree), zato preprosto ni imela ustreznega vstopnega mesta za tovrstni napad.
 
@@ -608,7 +615,7 @@ Ta konstantno pošilja ping pakete z velikostjo 600 bajtov in čim manjšo zakas
 Napad sem preizkusil tudi na telefonu OPPO Find X5 in Samsung Galaxy Ace S5830. Na OPPO Find X5 ni imel vpliva, medtem ko je imel Samsung Galaxy Ace S5830 velike težave z Bluetooth povezavo. Na moje ICMP pakete je odgovarjal z zamikom do 15000 ms oziroma 15 s, kar je povezavo naredilo praktično neuporabno.
 
 \subsection{Bluetooth spam}
-Ta napad je zelo podoben prejšnjemu napadu in bi ga tudi štel pod denial of service, ampak bi mu rad dal dodatno pozornost. V tem delu bom uporabljal posebno opremo in sicer \texttt{Flipper zero} uporabil pa ga bom da zamrznem iPhone napravo. 
+Ta napad je zelo podoben prejšnjemu napadu in bi ga tudi štel pod denial of service, ampak bi mu rad dal dodatno pozornost. V tem delu bom uporabljal posebno opremo in sicer \texttt{Flipper zero} uporabil pa ga bom da zamrznem iPhone napravo (iPhone 8). 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{flipper.png}
@@ -618,7 +625,9 @@ Ta napad je zelo podoben prejšnjemu napadu in bi ga tudi štel pod denial of se
 
 Napad Bluetooth spam s Flipper Zero izkorišča ranljivost v načinu za združevanje (pairing) naprav. Flipper Zero se lažno predstavi kot širokopasovna naprava HID (npr. tipkovnica, miška ali slušalke) in nato neprekinjeno pošilja zahteve za vzpostavitev povezave prek protokola L2CAP na ciljno napravo. Vsaka zahteva sproži na tarči celoten postopek odkrivanja storitev in avtentikacije, ki porablja sistemske vire. Ker Flipper Zero pošilja več sto zahtevkov na sekundo, postane Bluetooth sklad preobremenjen – pojavijo se zakasnitve, zamrznitev uporabniškega vmesnika in na koncu popolna blokada naprave.
 
-Napad ne prizadene samo iPhonov, temveč tudi druge naprave z operacijskimi sistemi Android in starejše različice macOS. Še posebej ranljive so bile različice iOS od 12.0 do 14.7, kjer je napad povzročil, da je telefon postal \textbf{popolnoma neuporaben} – ni se odzival na dotike, gumbi niso delovali, edina rešitev pa je bil trd ponovni zagon (force restart). Kasneje je Apple v posodobitvah iOS 14.8 in 15 uvedel omejitve hitrosti parjenja, vendar določeni modeli (zlasti starejši iPhone 6, 7, 8 in X) ostajajo delno ranljivi, prav tako pa podobne težave še vedno obstajajo na nekaterih napravah Android z Bluetooth skladom, ki nima vgrajenih zaščit.
+Napad ne prizadene samo iPhonov, temveč tudi druge naprave z operacijskimi sistemi Android in starejše različice macOS. Še posebej ranljive so bile različice iOS od 12.0 do 17.1, kjer je napad povzročil, da je telefon postal \textbf{popolnoma neuporaben} – ni se odzival na dotike, gumbi niso delovali, edina rešitev pa je bil trd ponovni zagon (force restart). Kasneje je Apple v posodobitvi iOS 17.2 uvedel zaščito proti tej specifični ranljivosti, vendar določeni modeli (zlasti starejši iPhone 6, 7, 8 in X) ostajajo delno ranljivi, saj ne morejo namestiti najnovejšega iOS-a. Prav tako podobne težave še vedno obstajajo na nekaterih napravah Android z Bluetooth skladom, ki nima vgrajenih zaščit.
+
+\newpage
 
 \section{Zaščita pred Bluetooth napadi}
 
@@ -627,7 +636,7 @@ Na podlagi izvedenih eksperimentov in opisanih napadov lahko podamo smernice za 
 \subsection{Splošni ukrepi}
 
 \begin{itemize}
-	\item \textbf{Izklop Bluetootha, ko ni v uporabi} – najučinkovitejša zaščita pred vsemi napadov (BlueSnarfing, Bluejacking, BlueBorne, CVE-2023-45866). Napadalec se ne more povezati z napravo, če je Bluetooth onemogočen.
+	\item \textbf{Izklop Bluetootha, ko ni v uporabi} – najučinkovitejša zaščita pred vsemi napadov. Napadalec se ne more povezati z napravo, če je Bluetooth onemogočen.
 	\item \textbf{Nevidni način (non‑discoverable)} – naprava se ne oglašuje, kar oteži začetno zaznavo, sicer s pravo opremo (npr. \texttt{Ubertooth One}) to velikokrat ni zadosti. Večina napadov zahteva, da je tarča odkritljiva vsaj v času parjenja.
 	\item \textbf{Redna posodabljanja programske opreme} – proizvajalci pogosto zakrpajo znane ranljivosti (npr. CVE-2023-45866, BlueBorne). Redno nameščanje najnovejših varnostnih popravkov za operacijski sistem in Bluetooth sklad zelo zmanjša možnosti za možne napade ali pa napad vsaj oteži.
 	\item \textbf{Uporaba sodobnih Bluetooth različic} – naprave z Bluetooth 4.2+ in vključenimi \textit{Secure Connections} so odporne na napade PIN brute force in reflection, saj uporabljajo močnejšo kriptografijo (ECDH) in zaščito pred ponovitvami.
@@ -670,45 +679,19 @@ Na podlagi izvedenih eksperimentov in opisanih napadov lahko podamo smernice za 
 
 Starejše naprave (npr. Samsung Galaxy Ace S5830) so ranljive za PIN brute force, reflection in DoS, saj ne podpirajo sodobnih varnostnih mehanizmov. Za takšne naprave je edina zanesljiva zaščita \textbf{popoln izklop Bluetootha}, razen kadar je povezava nujno potrebna. Prav tako jih ne uporabljajte za občutljive podatke, če je Bluetooth vklopljen. Seveda take naprave imajo tudi dosti manj odprtih storitev preko bluetootha, tako da niso vsi napadi možni, ampak preko take povezave ne nikoli prenašati kakšnih občutljivih podatkov.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\newpage
 
 \section{Zaključek}
 V seminarski nalogi smo celovito raziskali področje varnosti Bluetooth tehnologije, od osnovnih meritev signala do naprednih metod vdora. Skozi praktično delo smo ugotovili, da moč signala (\texttt{RSSI}) sicer upada z razdaljo, vendar število naprav v okolici ne vpliva nujno na moč, temveč predvsem na variabilnost in stabilnost povezave.
 
-Analiza prometa z orodjem Wireshark je omogočila podroben vpogled v L2CAP protokol in "handshake" proces. Ugotovljeno je bilo, da lahko že majhne nepravilnosti v implementaciji protokola (kot so bili \textit{malformed packets} pri starejšem Samsungu) povzročijo težave v komunikaciji, kar lahko napadalci izkoristijo za DoS napade.
+Analiza prometa z orodjem Wireshark je omogočila podroben vpogled v L2CAP protokol in handshake proces. Ugotovljeno je bilo, da lahko že majhne nepravilnosti v implementaciji protokola (kot so bili \textit{malformed packets} pri starejšem Samsungu) povzročijo težave v komunikaciji, kar lahko napadalci izkoristijo za DoS napade.
 
 Najučinkovitejša in hkrati najbolj skrb vzbujajoča je bila demonstracija napada CVE-2023-45866. Dejstvo, da lahko napadalec brez kakršne koli interakcije uporabnika prevzame nadzor nad vnosom tipkovnice, kaže na resnost Bluetooth ranljivosti. Čeprav so sodobni sistemi načeloma popravljeni, kombinacija s tehnikami, kot je MAC spoofing, dokazuje, da popolne varnosti ni – še posebej, če napadalec izkoristi vnaprej vzpostavljeno zaupanje med napravami.
 
-Naloga je potrdila začetno hipotezo: Bluetooth je izjemno priročen, a hkrati varnostno tvegan protokol. Za povprečnega uporabnika je ključno zavedanje, da Bluetooth vmesnik predstavlja odprta vrata v napravo, ki jih je treba odpirati preudarno in le takrat, ko je to nujno potrebno. Pridobljeno znanje bo služilo kot osnova za nadaljnje raziskovanje brezžičnih tehnologij in kibernetske varnosti.
+Naloga nam je pokazala, da je bluetooth izjemno priročen, a hkrati varnostno tvegan protokol. Za povprečnega uporabnika je ključno zavedanje, da Bluetooth vmesnik predstavlja odprta vrata v napravo, ki jih je treba odpirati pazljivo in le takrat, ko je to nujno potrebno. Pridobljeno znanje bo služilo kot osnova za nadaljnje raziskovanje brezžičnih tehnologij in kibernetske varnosti.
 
 \pagebreak
+\nocite{*}
 \bibliographystyle{plain}
 \bibliography{references}
 

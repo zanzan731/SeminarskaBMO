@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  26 APR 2026 21:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  30 APR 2026 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -421,6 +421,26 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 \@float@every@listing=\toks36
 \c@listing=\count329
 )
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+LaTeX Info: Redefining \color on input line 762.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box66
@@ -521,12 +541,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip73
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 35.
-Package hyperref Info: Option `unicode' set `true' on input line 35.
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 35.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 38.
+Package hyperref Info: Option `unicode' set `true' on input line 38.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 38.
 
-Package hyperref Info: Option `pdftoolbar' set `true' on input line 35.
-Package hyperref Info: Option `pdfmenubar' set `true' on input line 35.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 38.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 38.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
@@ -538,24 +558,24 @@ Package babel Info: 'slovene' activates 'slovene' shorthands.
 )
 \openout1 = `porocilo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -583,7 +603,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 43.
+Package hyperref Info: Link coloring OFF on input line 46.
 
 (./porocilo.out) (./porocilo.out)
 \@outlinefile=\write4
@@ -593,204 +613,221 @@ Package hyperref Info: Link coloring OFF on input line 43.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-ec.enc}] (./porocilo.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
 .
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
 .
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-5.
+4.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-5.
+4.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 5.
+(Font)              <10.95> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 5.
+(Font)              <6> on input line 4.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...nekaj osnovnih ukazov}{14}{subsection.5.4}
+l.23 ...ine {5.2}Bluetoothctl}{16}{subsection.5.2}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `porocilo.toc'.
 
  [2]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
-7.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
+2.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3]
-<l2ping_in_hcitool.png, id=195, 593.21625pt x 440.64626pt>
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+11.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<heatmap.png, id=210, 578.16pt x 433.62pt>
+File: heatmap.png Graphic file (type png)
+<use heatmap.png>
+Package pdftex.def Info: heatmap.png  used on input line 114.
+(pdftex.def)             Requested size: 360.0pt x 269.99951pt.
+ [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+<stNaprav_heatmap.png, id=219, 559.8516pt x 384.9582pt>
+File: stNaprav_heatmap.png Graphic file (type png)
+<use stNaprav_heatmap.png>
+Package pdftex.def Info: stNaprav_heatmap.png  used on input line 131.
+(pdftex.def)             Requested size: 360.0pt x 247.54132pt.
+ [5 <./heatmap.png>] [6 <./stNaprav_heatmap.png>]
+<l2ping_in_hcitool.png, id=235, 593.21625pt x 440.64626pt>
 File: l2ping_in_hcitool.png Graphic file (type png)
 <use l2ping_in_hcitool.png>
-Package pdftex.def Info: l2ping_in_hcitool.png  used on input line 125.
+Package pdftex.def Info: l2ping_in_hcitool.png  used on input line 157.
 (pdftex.def)             Requested size: 360.0pt x 267.42218pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 135.
+(Font)              <10> on input line 167.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 135.
+(Font)              <7> on input line 167.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 135.
+(Font)              <5> on input line 167.
 
-Overfull \hbox (54.59796pt too wide) in paragraph at lines 135--148
+Overfull \hbox (54.59796pt too wide) in paragraph at lines 167--180
  [][] 
  []
 
-[4 <./l2ping_in_hcitool.png>]
+[7 <./l2ping_in_hcitool.png>]
 \pydata@fh@0=\write6
 \openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260426210017 2625186A033BEFBA098DE7
+runsystem(latexminted config  --timestamp 20260430214625 2625186A033BEFBA098DE7
 0EC1FDEDA8)...executed safely (allowed).
 
 
 (./_2625186A033BEFBA098DE70EC1FDEDA8.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260426210017 2625186A033BEFBA0
+runsystem(latexminted cleanconfig  --timestamp 20260430214625 2625186A033BEFBA0
 98DE70EC1FDEDA8)...executed safely (allowed).
 
 
 (./_minted/default.style.minted)
-(./_minted/4C8382AB24141536F6567F2D198F0EA0.highlight.minted
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(./_minted/484751BEA589921C58538C35063BED9E.highlight.minted
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2.
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
 6.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Overfull \hbox (31.96513pt too wide) in paragraph at lines 13--13
-|| | |[][][][]\T1/lmtt/m/n/10.95 times[].[]append([]float[](match[].[]group([]1
-[])))|  
- []
-
-[5{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}])
-Overfull \hbox (54.59796pt too wide) in paragraph at lines 190--203
+))
+Overfull \hbox (54.59796pt too wide) in paragraph at lines 228--241
  [][] 
  []
 
-<handshake.png, id=215, 1059.96pt x 69.25874pt>
+[8{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathsy.enc}]
+<handshake.png, id=252, 1059.96pt x 69.25874pt>
 File: handshake.png Graphic file (type png)
 <use handshake.png>
-Package pdftex.def Info: handshake.png  used on input line 219.
+Package pdftex.def Info: handshake.png  used on input line 257.
 (pdftex.def)             Requested size: 360.0pt x 23.5223pt.
-[6 <./handshake.png>]
-<zmogljivost_identifikacija.png, id=223, 1314.9125pt x 492.84125pt>
+ [9 <./handshake.png>]
+<zmogljivost_identifikacija.png, id=259, 1314.9125pt x 492.84125pt>
 File: zmogljivost_identifikacija.png Graphic file (type png)
 <use zmogljivost_identifikacija.png>
-Package pdftex.def Info: zmogljivost_identifikacija.png  used on input line 235
+Package pdftex.def Info: zmogljivost_identifikacija.png  used on input line 273
 .
 (pdftex.def)             Requested size: 360.0pt x 134.92638pt.
 
-Overfull \hbox (7.87697pt too wide) in paragraph at lines 242--243
+Overfull \hbox (7.87697pt too wide) in paragraph at lines 280--281
 []\T1/lmr/m/n/10.95 Najprej se iz-ve-dejo ukazi \T1/lmtt/m/n/10.95 Read Remote 
 Supported Features \T1/lmr/m/n/10.95 in \T1/lmtt/m/n/10.95 Read Remote
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-48.
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [7 <./zmogljivost_identifikacija.png>]
-<l2cap_wireshark.png, id=230, 1251.67625pt x 701.62125pt>
+[10 <./zmogljivost_identifikacija.png>]
+<l2cap_wireshark.png, id=266, 1251.67625pt x 701.62125pt>
 File: l2cap_wireshark.png Graphic file (type png)
 <use l2cap_wireshark.png>
-Package pdftex.def Info: l2cap_wireshark.png  used on input line 260.
+Package pdftex.def Info: l2cap_wireshark.png  used on input line 298.
 (pdftex.def)             Requested size: 360.0pt x 201.79483pt.
- [8 <./l2cap_wireshark.png>]
-<malformed_packet.png, id=237, 1171.37625pt x 86.3225pt>
+ [11 <./l2cap_wireshark.png>]
+<malformed_packet.png, id=272, 1171.37625pt x 86.3225pt>
 File: malformed_packet.png Graphic file (type png)
 <use malformed_packet.png>
-Package pdftex.def Info: malformed_packet.png  used on input line 283.
+Package pdftex.def Info: malformed_packet.png  used on input line 321.
 (pdftex.def)             Requested size: 360.0pt x 26.52917pt.
-<disconect.png, id=238, 1098.1025pt x 70.2625pt>
+<disconect.png, id=273, 1098.1025pt x 70.2625pt>
 File: disconect.png Graphic file (type png)
 <use disconect.png>
-Package pdftex.def Info: disconect.png  used on input line 293.
+Package pdftex.def Info: disconect.png  used on input line 331.
 (pdftex.def)             Requested size: 360.0pt x 23.03444pt.
- [9 <./malformed_packet.png>] [10 <./disconect.png>] [11] [12] [13]
-Underfull \hbox (badness 8019) in paragraph at lines 466--466
+ [12 <./malformed_packet.png>] [13 <./disconect.png>] [14] [15] [16]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+Underfull \hbox (badness 8019) in paragraph at lines 507--507
 []|\T1/lmr/m/n/10 Deaktivira (iz-klopi) Blu-e-to-oth vme-snik
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 466--466
+Underfull \hbox (badness 1033) in paragraph at lines 507--507
 []|\T1/lmr/m/n/10 Spremeni lo-kalno ime Blu-e-to-oth na-prave
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--466
+Underfull \hbox (badness 10000) in paragraph at lines 507--507
 []|\T1/lmr/m/n/10 Zaºene Blu-e-to-oth sto-ri-tev (oz.
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[14] [15]
-Overfull \hbox (13.48828pt too wide) in paragraph at lines 526--526
-[]|\T1/lmr/bx/n/10 Bluetooth
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 526--526
-\T1/lmr/bx/n/10 raz-li-
- []
-
-[16] [17]
-<connesione_doppia_enco.jpg, id=286, 1084.05pt x 1056.94875pt>
+[18] [19] [20] [21]
+<connesione_doppia_enco.jpg, id=331, 1084.05pt x 1056.94875pt>
 File: connesione_doppia_enco.jpg Graphic file (type jpg)
 <use connesione_doppia_enco.jpg>
-Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 561.
+Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 602.
 (pdftex.def)             Requested size: 360.0pt x 351.00366pt.
- [18] [19 <./connesione_doppia_enco.jpg>]
-<flipper.png, id=298, 800.9925pt x 702.625pt>
+ [22 <./connesione_doppia_enco.jpg>]
+<flipper.png, id=337, 800.9925pt x 702.625pt>
 File: flipper.png Graphic file (type png)
 <use flipper.png>
-Package pdftex.def Info: flipper.png  used on input line 580.
+Package pdftex.def Info: flipper.png  used on input line 621.
 (pdftex.def)             Requested size: 360.0pt x 315.79236pt.
- [20 <./flipper.png>]
-[21]
-Underfull \hbox (badness 1297) in paragraph at lines 630--630
+ [23] [24 <./flipper.png>] [25]
+Underfull \hbox (badness 1297) in paragraph at lines 673--673
 []|\T1/lmr/m/n/10 Nikoli ne upo-ra-bljajte krat-kih PIN kod
  []
 
-[22] [23] (./porocilo.bbl) [24] (./porocilo.aux)
+[26] [27] [28]
+Overfull \hbox (8.14436pt too wide) in paragraph at lines 687--688
+\T1/lmr/m/n/10.95 majhne ne-pra-vil-no-sti v im-ple-men-ta-ciji pro-to-kola (ko
+t so bili \T1/lmr/m/it/10.95 mal-for-med packets
+ []
+
+[29] (./porocilo.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\T1/lmr/m/n/10.95 nordicsemi . com / courses / bluetooth-[]low-[]energy-[]funda
+mentals / lessons /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\T1/lmr/m/n/10.95 lesson-[]5-[]bluetooth-[]le-[]security-[]fundamentals / topic
+ / pairing-[]process/$[].
+ []
+
+) [30] (./porocilo.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: F7FA519E13F202C14548BEB4777BB84E;6541.
+(rerunfilecheck)             Checksum: 0DD8663D0487C09BB97192DBA5265B79;7058.
  ) 
 Here is how much of TeX's memory you used:
- 17715 strings out of 467533
- 340026 string characters out of 5422138
- 856839 words of memory out of 5000000
- 46283 multiletter control sequences out of 15000+600000
+ 18182 strings out of 467533
+ 346774 string characters out of 5422138
+ 872145 words of memory out of 5000000
+ 46724 multiletter control sequences out of 15000+600000
  699578 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,11n,93p,876b,1090s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,11n,93p,909b,845s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/pub
@@ -800,10 +837,10 @@ r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt9.pfb>
-Output written on porocilo.pdf (25 pages, 1078700 bytes).
+Output written on porocilo.pdf (31 pages, 1194482 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 343 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 405 compressed objects within 5 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

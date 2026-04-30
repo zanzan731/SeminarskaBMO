@@ -1,0 +1,3 @@
+spooftooph -i hci0 -a 2C:4D:79:78:2F:D7 -n "OPPO Enco X2"
+btmgmt -i hci0 power off
+btmgmt -i hci1 power on
