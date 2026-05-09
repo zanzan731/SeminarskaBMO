@@ -3,33 +3,33 @@
 \contentsline {section}{\numberline {2}Moč signala glede na oddaljenost in število naprav}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Moč signala v prostoru}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Vpliv števila naprav na moč signala}{5}{subsection.2.2}%
-\contentsline {section}{\numberline {3}L2ping in analiza prometa}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Analiza prometa v Wiresharku}{9}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Vzpostavitev povezave}{9}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Izmenjava zmogljivosti in identifikacija naprave}{10}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Vzpostavitev L2CAP komunikacije in prenos podatkov}{11}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Zaključek povezave}{12}{subsubsection.3.1.4}%
-\contentsline {section}{\numberline {4}Tipi napadov na bluetooth naprave}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}BlueSnarfing}{14}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}MAC address spoofing}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}BlueBorne}{14}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Reflection Attack}{14}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Denial of Service (DoS)}{15}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Bluejacking}{15}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Bluesmacking}{15}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}PIN Brute Force}{15}{subsection.4.8}%
-\contentsline {section}{\numberline {5}Eksperimentalna analiza Bluetooth napadov}{16}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Hcitool}{16}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Bluetoothctl}{16}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Sdptool}{17}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Še nekaj osnovnih ukazov}{18}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}CVE-2023-45866}{19}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Rezultati testiranja}{20}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Ugotovitve}{21}{subsubsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}Denial of Service (DoS)}{22}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Bluetooth spam}{23}{subsection.5.7}%
-\contentsline {section}{\numberline {6}Zaščita pred Bluetooth napadi}{26}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Splošni ukrepi}{26}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Specifične zaščite glede na vrsto napada}{27}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Posebnosti za starejše naprave (Bluetooth 3.0 in nižje)}{27}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Zaključek}{29}{section.7}%
+\contentsline {section}{\numberline {3}L2ping in analiza prometa}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Analiza prometa v Wiresharku}{8}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Vzpostavitev povezave}{8}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Izmenjava zmogljivosti in identifikacija naprave}{9}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Vzpostavitev L2CAP komunikacije in prenos podatkov}{10}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Zaključek povezave}{11}{subsubsection.3.1.4}%
+\contentsline {section}{\numberline {4}Tipi napadov na bluetooth naprave}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}BlueSnarfing}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}MAC address spoofing}{13}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}BlueBorne}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Reflection Attack}{13}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Denial of Service (DoS)}{14}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Bluejacking}{14}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Bluesmacking}{14}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}PIN Brute Force}{14}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Eksperimentalna analiza Bluetooth napadov}{15}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Hcitool}{15}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Bluetoothctl}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Sdptool}{16}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Še nekaj osnovnih ukazov}{17}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}CVE-2023-45866}{18}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Rezultati testiranja}{19}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Ugotovitve}{20}{subsubsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}Denial of Service (DoS)}{21}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Bluetooth spam}{22}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Zaščita pred Bluetooth napadi}{25}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Splošni ukrepi}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Specifične zaščite glede na vrsto napada}{26}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Posebnosti za starejše naprave (Bluetooth 3.0 in nižje)}{26}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Zaključek}{28}{section.7}%

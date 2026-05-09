@@ -106,9 +106,14 @@ V tem poglavju analiziramo odvisnost moči brezžičnega signala (\texttt{RSSI})
 Vse meritve so bile izvedene večkrat z namenom zmanjšanja vpliva naključnih odstopanj. Vsaka posamezna meritev je bila ponovljena petkrat, končna vrednost \texttt{RSSI} pa je bila izračunana kot povprečje teh meritev.
 
 Za zajem podatkov smo uporabili Python skripto z uporabo knjižnice \texttt{Bleak}, ki omogoča skeniranje \texttt{BLE} naprav.
+Naslednja vrstica v Pythonu:
+\begin{verbatim}
+	results = await BleakScanner.discover(timeout=5.0, return_adv=True)
+\end{verbatim}
+vrne slovar najdenih naprav, iz katerega odčitamo \texttt{RSSI} iskane naprave.
 
 \subsection{Moč signala v prostoru}
-Na sliki \ref{fig:heatmap} je prikazana toplotna karta (angl. heatmap) jakosti signala v prostoru dimenzij 3 × 3,5 m. Dostopna točka se nahaja na mestu A3. Opazimo, da je signal najmočnejši v njeni bližini ter postopoma slabi z naraščajočo oddaljenostjo. Na porazdelitev moči pomembno vplivajo tudi ovire in odboji od sten, kar se kaže v območjih z nenadnimi padci signala.
+Na sliki \ref{fig:heatmap} je prikazana toplotna karta (angl. heatmap) jakosti signala v prostoru dimenzij 3 × 3,5 m. Dostopna točka, označena z modro, se nahaja med točkama A2 in A3. Opazimo, da je signal najmočnejši v njeni bližini ter postopoma slabi z naraščajočo oddaljenostjo. Na porazdelitev moči pomembno vplivajo tudi ovire in odboji od sten, kar se kaže v območjih z nenadnimi padci signala. Predmeti, ki najbolj vplivajo na moč signala so označeni na sliki.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{heatmap.png}
@@ -117,23 +122,13 @@ Na sliki \ref{fig:heatmap} je prikazana toplotna karta (angl. heatmap) jakosti s
 \end{figure}
 
 \subsection{Vpliv števila naprav na moč signala}
-Na Sliki \ref{fig:stnaprav} je prikazana odvisnost \texttt{RSSI} od oddaljenosti in števila naprav. Rezultati kažejo jasno negativno korelacijo med \texttt{RSSI} in oddaljenostjo, kar je skladno s teoretičnimi modeli širjenja radijskih valov.
-
-Vpliv števila naprav na \texttt{RSSI} pa ni tak, kot bi morda pričakovali. Iz grafa je razvidno, da se \texttt{RSSI} pri povečevanju števila naprav ne zmanjšuje monotono, temveč se vrednosti naključno spreminjajo. To lahko pripišemo več dejavnikom:
-
-\begin{itemize}
-	\item \texttt{RSSI} meri moč sprejetega signala, ne pa kakovosti povezave ali zasičenosti kanala,
-	\item dodatne naprave vplivajo predvsem na zasedenost medija (interferenco, kolizije), ne nujno neposredno na izmerjeno moč signala,
-	\item merilni šum in variabilnost okolja (premiki, odboji, večpotno širjenje) lahko povzročijo nihanja meritev.
-\end{itemize}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{stNaprav_heatmap.png}
-	\caption{vpliv števila naprav in oddaljenosti na \texttt{RSSI}}
-	\label{fig:stnaprav}
-\end{figure}
-
-Na podlagi rezultatov lahko zaključimo, da je oddaljenost glavni dejavnik, ki vpliva na upad \texttt{RSSI}, medtem ko število naprav v opazovanem eksperimentu ni imelo sistematičnega vpliva na izmerjeno moč signala, temveč predvsem na variabilnost meritev.
+Ali se \texttt{RSSI} spremeni, če v okolico naše bluetooth povezave dodajamo naprave, na katere generiramo bluetooth promet?
+\begin{verbatim}
+	\\Ukaz za generiranje prometa
+	sudo l2ping <MAC address>
+\end{verbatim}
+Bluetooth uporablja t.i. \texttt{adaptive frequency hopping (AFH)}, kar pomeni, da naprave, ob pošiljanju paketov, izjemno hitro spreminjajo frekvenčne kanale (BLE uporabljajo 40 kanalov) in se izogibajo trkom in šumu.
+Zaradi tega se \texttt{RSSI} ne spremeni. Razlika ob povečanju prometa je ta, da se zaradi trkov izgubi več paketov, posledično pa pride do večje latence.
 
 \newpage
 

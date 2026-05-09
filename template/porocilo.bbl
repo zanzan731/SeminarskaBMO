@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{bluetooth-security-fundamentals}
 DevAcademy.
@@ -13,6 +13,13 @@ Wireshark Foundation.
 \newblock \url{https://www.wireshark.org/}.
 \newblock Uradna spletna stran priljubljenega orodja za analizo omrežnega
   prometa.
+
+\bibitem{bluetooth-AFH}
+Jason Marcel.
+\newblock Bluetooth adaptive frequency hopping.
+\newblock
+  \url{https://www.bluetooth.com/blog/how-bluetooth-technology-uses-adaptive-frequency-hopping-to-overcome-packet-interference/}.
+\newblock Članek o bluetooth AFH.
 
 \bibitem{cve2023-45866}
 {National Vulnerability Database (NVD)}.
