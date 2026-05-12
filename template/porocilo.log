@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.9)  9 MAY 2026 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.9)  12 MAY 2026 12:08
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -551,7 +551,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...ine {5.2}Bluetoothctl}{15}{subsection.5.2}
+l.23 ...ine {5.2}Bluetoothctl}{16}{subsection.5.2}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `porocilo.toc'.
@@ -561,44 +561,40 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 92
  (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3]
-Overfull \hbox (30.91388pt too wide) in paragraph at lines 112--112
-[] \T1/lmtt/m/n/10.95 results = await BleakScanner.discover(timeout=5.0, return_adv=True)[] 
+Overfull \hbox (25.16515pt too wide) in paragraph at lines 112--112
+[]\T1/lmtt/m/n/10.95 results = await BleakScanner.discover(timeout=5.0, return_adv=True)[] 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 116.
-(C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 <heatmap.png, id=208, 578.16pt x 433.62pt>
 File: heatmap.png Graphic file (type png)
 <use heatmap.png>
-Package pdftex.def Info: heatmap.png  used on input line 119.
+Package pdftex.def Info: heatmap.png  used on input line 126.
 (pdftex.def)             Requested size: 360.0pt x 269.99951pt.
- [4{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [5 <./heatmap.png>]
-<l2ping_in_hcitool.png, id=224, 593.21625pt x 440.64626pt>
+[4{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [5 <./heatmap.png>] [6]
+<l2ping_in_hcitool.png, id=230, 593.21625pt x 440.64626pt>
 File: l2ping_in_hcitool.png Graphic file (type png)
 <use l2ping_in_hcitool.png>
-Package pdftex.def Info: l2ping_in_hcitool.png  used on input line 152.
+Package pdftex.def Info: l2ping_in_hcitool.png  used on input line 167.
 (pdftex.def)             Requested size: 360.0pt x 267.42218pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 162.
+(Font)              <10> on input line 177.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 162.
+(Font)              <7> on input line 177.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 162.
+(Font)              <5> on input line 177.
 
-Overfull \hbox (54.59796pt too wide) in paragraph at lines 162--175
+Overfull \hbox (54.59796pt too wide) in paragraph at lines 177--190
  [][] 
  []
 
-[6 <./l2ping_in_hcitool.png>]
+[7 <./l2ping_in_hcitool.png>]
 \pydata@fh@0=\write6
 \openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260509221759 2625186A033BEFBA098DE70EC1FDEDA8)...executed.
+runsystem(latexminted config  --timestamp 20260512120829 2625186A033BEFBA098DE70EC1FDEDA8)...executed.
 
  (_2625186A033BEFBA098DE70EC1FDEDA8.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260509221759 2625186A033BEFBA098DE70EC1FDEDA8)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20260512120829 2625186A033BEFBA098DE70EC1FDEDA8)...executed.
 
  (_minted/default.style.minted) (_minted/883FB39722FA3D6A6677CAA5CA85ACD2.highlight.minted
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
@@ -607,86 +603,89 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 6
  (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \hbox (54.59796pt too wide) in paragraph at lines 223--236
+Overfull \hbox (54.59796pt too wide) in paragraph at lines 238--251
  [][] 
  []
 
-[7{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<handshake.png, id=242, 1059.96pt x 69.25874pt>
+[8{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+<handshake.png, id=249, 1059.96pt x 69.25874pt>
 File: handshake.png Graphic file (type png)
 <use handshake.png>
-Package pdftex.def Info: handshake.png  used on input line 252.
+Package pdftex.def Info: handshake.png  used on input line 267.
 (pdftex.def)             Requested size: 360.0pt x 23.5223pt.
- [8 <./handshake.png>]
-<zmogljivost_identifikacija.png, id=249, 1314.9125pt x 492.84125pt>
+ [9 <./handshake.png>]
+<zmogljivost_identifikacija.png, id=256, 1314.9125pt x 492.84125pt>
 File: zmogljivost_identifikacija.png Graphic file (type png)
 <use zmogljivost_identifikacija.png>
-Package pdftex.def Info: zmogljivost_identifikacija.png  used on input line 268.
+Package pdftex.def Info: zmogljivost_identifikacija.png  used on input line 283.
 (pdftex.def)             Requested size: 360.0pt x 134.92638pt.
 
-Overfull \hbox (7.87697pt too wide) in paragraph at lines 275--276
+Overfull \hbox (7.87697pt too wide) in paragraph at lines 290--291
 []\T1/lmr/m/n/10.95 Najprej se iz-ve-dejo ukazi \T1/lmtt/m/n/10.95 Read Remote Supported Features \T1/lmr/m/n/10.95 in \T1/lmtt/m/n/10.95 Read Remote
  []
 
-[9 <./zmogljivost_identifikacija.png>]
-<l2cap_wireshark.png, id=256, 1251.67625pt x 701.62125pt>
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 296.
+(C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [10 <./zmogljivost_identifikacija.png>]
+<l2cap_wireshark.png, id=262, 1251.67625pt x 701.62125pt>
 File: l2cap_wireshark.png Graphic file (type png)
 <use l2cap_wireshark.png>
-Package pdftex.def Info: l2cap_wireshark.png  used on input line 293.
+Package pdftex.def Info: l2cap_wireshark.png  used on input line 308.
 (pdftex.def)             Requested size: 360.0pt x 201.79483pt.
- [10 <./l2cap_wireshark.png>]
-<malformed_packet.png, id=262, 1171.37625pt x 86.3225pt>
+ [11 <./l2cap_wireshark.png>]
+<malformed_packet.png, id=269, 1171.37625pt x 86.3225pt>
 File: malformed_packet.png Graphic file (type png)
 <use malformed_packet.png>
-Package pdftex.def Info: malformed_packet.png  used on input line 316.
+Package pdftex.def Info: malformed_packet.png  used on input line 331.
 (pdftex.def)             Requested size: 360.0pt x 26.52917pt.
-<disconect.png, id=263, 1098.1025pt x 70.2625pt>
+<disconect.png, id=270, 1098.1025pt x 70.2625pt>
 File: disconect.png Graphic file (type png)
 <use disconect.png>
-Package pdftex.def Info: disconect.png  used on input line 326.
+Package pdftex.def Info: disconect.png  used on input line 341.
 (pdftex.def)             Requested size: 360.0pt x 23.03444pt.
- [11 <./malformed_packet.png>] [12 <./disconect.png>] [13] [14] [15]
+ [12 <./malformed_packet.png>] [13 <./disconect.png>] [14] [15] [16]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[16]
-Underfull \hbox (badness 8019) in paragraph at lines 502--502
+[17]
+Underfull \hbox (badness 8019) in paragraph at lines 517--517
 []|\T1/lmr/m/n/10 Deaktivira (iz-klopi) Blu-e-to-oth vme-snik
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 502--502
+Underfull \hbox (badness 1033) in paragraph at lines 517--517
 []|\T1/lmr/m/n/10 Spremeni lo-kalno ime Blu-e-to-oth na-prave
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--502
+Underfull \hbox (badness 10000) in paragraph at lines 517--517
 []|\T1/lmr/m/n/10 Zaºene Blu-e-to-oth sto-ri-tev (oz.
  []
 
-[17] [18] [19] [20]
-<connesione_doppia_enco.jpg, id=320, 1084.05pt x 1056.94875pt>
+[18] [19] [20] [21]
+<connesione_doppia_enco.jpg, id=327, 1084.05pt x 1056.94875pt>
 File: connesione_doppia_enco.jpg Graphic file (type jpg)
 <use connesione_doppia_enco.jpg>
-Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 597.
+Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 615.
 (pdftex.def)             Requested size: 360.0pt x 351.00366pt.
- [21 <./connesione_doppia_enco.jpg>]
-<flipper.png, id=326, 800.9925pt x 702.625pt>
+ [22] [23 <./connesione_doppia_enco.jpg>]
+<flipper.png, id=337, 800.9925pt x 702.625pt>
 File: flipper.png Graphic file (type png)
 <use flipper.png>
-Package pdftex.def Info: flipper.png  used on input line 616.
+Package pdftex.def Info: flipper.png  used on input line 634.
 (pdftex.def)             Requested size: 360.0pt x 315.79236pt.
- [22] [23 <./flipper.png>] [24]
-Underfull \hbox (badness 1297) in paragraph at lines 668--668
+ [24 <./flipper.png>] [25]
+Underfull \hbox (badness 1297) in paragraph at lines 686--686
 []|\T1/lmr/m/n/10 Nikoli ne upo-ra-bljajte krat-kih PIN kod
  []
 
-[25] [26] [27]
-Overfull \hbox (8.14436pt too wide) in paragraph at lines 682--683
+[26] [27] [28]
+Overfull \hbox (8.14436pt too wide) in paragraph at lines 700--701
 \T1/lmr/m/n/10.95 majhne ne-pra-vil-no-sti v im-ple-men-ta-ciji pro-to-kola (kot so bili \T1/lmr/m/it/10.95 mal-for-med packets
  []
 
-[28] (porocilo.bbl
+[29] (porocilo.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 \T1/lmr/m/n/10.95 nordicsemi . com / courses / bluetooth-[]low-[]energy-[]fundamentals / lessons /
  []
@@ -721,26 +720,26 @@ Underfull \hbox (badness 3229) in paragraph at lines 56--63
 \T1/lmr/m/n/10.95 vul-ne-ra-bi-li-ties.  []$https : / / access . redhat . com / security / vulnerabilities /
  []
 
-[29]) [30] (porocilo.aux)
+[30]) [31] (porocilo.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: 0DD8663D0487C09BB97192DBA5265B79;7058.
+(rerunfilecheck)             Checksum: 989090E05A1906E04F44B43034B9F45A;7058.
  ) 
 Here is how much of TeX's memory you used:
  18279 strings out of 467871
- 355353 string characters out of 5418377
- 881816 words of memory out of 5000000
- 46784 multiletter control sequences out of 15000+600000
+ 355348 string characters out of 5418377
+ 881817 words of memory out of 5000000
+ 46783 multiletter control sequences out of 15000+600000
  699578 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,11n,93p,974b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on porocilo.pdf (31 pages, 1213213 bytes).
+ 86i,11n,93p,1000b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on porocilo.pdf (32 pages, 1223653 bytes).
 PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
  334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

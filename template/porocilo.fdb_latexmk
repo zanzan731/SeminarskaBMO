@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex porocilo"] 1778357093.44945 "porocilo.aux" "porocilo.bbl" "porocilo" 1778357883.39646 0
+["bibtex porocilo"] 1778580508.54147 "porocilo.aux" "porocilo.bbl" "porocilo" 1778580512.76329 0
   "./references.bib" 1778357155 3160 3fcd5aea82bbe41c97f2ff379b3130aa ""
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "porocilo.aux" 1778357882 10369 b7cb54590425199ad1aac4b54b4f3d32 "pdflatex"
+  "porocilo.aux" 1778580512 10391 cd73c3b52a81b17f3ff408ccc0f8a647 "pdflatex"
   (generated)
   "porocilo.bbl"
   "porocilo.blg"
   (rewritten before read)
-["pdflatex"] 1778357879.63888 "c:/Users/kleme/Documents/DATOTEKE/FRI/BMO/SeminarskaBMO/template/porocilo.tex" "porocilo.pdf" "porocilo" 1778357883.39693 0
+["pdflatex"] 1778580508.8727 "c:/Users/kleme/Documents/DATOTEKE/FRI/BMO/SeminarskaBMO/template/porocilo.tex" "porocilo.pdf" "porocilo" 1778580512.76407 0
   "C:/Users/kleme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1777534226 82705 9cc9f144eacd499bc23a611703921467 ""
   "C:/Users/kleme/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1767985824 13333486 afbc52802cacc47cec1ac98521181b2c ""
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -55,6 +55,7 @@
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb" 1256929440 123394 992f5e87d698d9e94717394c62580ea6 ""
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb" 1256929440 121065 ba8daf2228d9e511988917831f1e22e9 ""
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb" 1256929440 112593 fda2373ba4420af33949610de4c28fe8 ""
+  "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb" 1256929440 27863 09ce3735688ffde955e72da27c95b61a ""
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb" 1256929440 28109 6d61305ed3d0eb794ebe36f15cf44aa0 ""
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb" 1256929440 117319 28a05fff1cac98366062ffbb2e22858d ""
   "C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb" 1256929440 113227 d3d1adc024746ff57b20efba82c6d365 ""
@@ -148,7 +149,7 @@
   "_minted/883FB39722FA3D6A6677CAA5CA85ACD2.highlight.minted" 1778346446 2705 26c4539e2bbd57c3e6a8405f710fb759 ""
   "_minted/_2625186A033BEFBA098DE70EC1FDEDA8.index.minted" 1778346448 275 985d40e58b09b2d953119b480a88a6e3 ""
   "_minted/default.style.minted" 1777533936 6526 e1fb43a91491f41b33310478eee48cdb ""
-  "c:/Users/kleme/Documents/DATOTEKE/FRI/BMO/SeminarskaBMO/template/porocilo.tex" 1778357879 42911 8f3c98f48ff5bb6446616be4e34de705 ""
+  "c:/Users/kleme/Documents/DATOTEKE/FRI/BMO/SeminarskaBMO/template/porocilo.tex" 1778580504 45555 cf65541f564adfec5f07d37a33a0a73e ""
   "connesione_doppia_enco.jpg" 1777533936 51395 cdfd8f6e929b4d73adee94f48c82d76b ""
   "disconect.png" 1777533936 21296 294b139a1e6dd54a17e9bc2e40b3de40 ""
   "flipper.png" 1777533936 179091 3fd59433850d914ca19a8df459c434e4 ""
@@ -157,11 +158,11 @@
   "l2cap_wireshark.png" 1777533936 258560 2d9387182b66c03277206492881dd618 ""
   "l2ping_in_hcitool.png" 1777533936 45730 695ca7843881e61ad01369beed43813e ""
   "malformed_packet.png" 1777533936 30060 3e2f6ae0ffb7420918cc55a20dcc989a ""
-  "porocilo.aux" 1778357882 10369 b7cb54590425199ad1aac4b54b4f3d32 "pdflatex"
-  "porocilo.bbl" 1778357093 3056 9f4aad78781624a17d86c537f91bfe9a "bibtex porocilo"
-  "porocilo.out" 1778357882 7058 0dd8663d0487c09bb97192dba5265b79 "pdflatex"
-  "porocilo.tex" 1778357879 42911 8f3c98f48ff5bb6446616be4e34de705 ""
-  "porocilo.toc" 1778357882 3092 c87e79ff2335764137b5eb632572e1fb "pdflatex"
+  "porocilo.aux" 1778580512 10391 cd73c3b52a81b17f3ff408ccc0f8a647 "pdflatex"
+  "porocilo.bbl" 1778580508 3056 9f4aad78781624a17d86c537f91bfe9a "bibtex porocilo"
+  "porocilo.out" 1778580512 7058 989090e05a1906e04f44b43034b9f45a "pdflatex"
+  "porocilo.tex" 1778580504 45555 cf65541f564adfec5f07d37a33a0a73e ""
+  "porocilo.toc" 1778580512 3093 29d617cf78f6bca329be4f029c347bb7 "pdflatex"
   "zmogljivost_identifikacija.png" 1777533936 185858 c9f9bbd705ea35be9e0c7b49cfc13e41 ""
   (generated)
   "porocilo.aux"
