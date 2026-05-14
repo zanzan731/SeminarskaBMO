@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  14 MAY 2026 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  14 MAY 2026 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,12 +698,12 @@ Overfull \hbox (54.59796pt too wide) in paragraph at lines 184--197
 \pydata@fh@0=\write6
 \openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260514153320 2625186A033BEFBA098DE7
+runsystem(latexminted config  --timestamp 20260514160409 2625186A033BEFBA098DE7
 0EC1FDEDA8)...executed safely (allowed).
 
 
 (./_2625186A033BEFBA098DE70EC1FDEDA8.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260514153320 2625186A033BEFBA0
+runsystem(latexminted cleanconfig  --timestamp 20260514160409 2625186A033BEFBA0
 98DE70EC1FDEDA8)...executed safely (allowed).
 
 
@@ -869,7 +869,7 @@ r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on porocilo.pdf (32 pages, 1373999 bytes).
+Output written on porocilo.pdf (32 pages, 1374409 bytes).
 PDF statistics:
  498 PDF objects out of 1000 (max. 8388607)
  417 compressed objects within 5 object streams

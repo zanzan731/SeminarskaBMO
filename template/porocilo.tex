@@ -362,7 +362,7 @@ Ta faza zagotavlja pravilno in kontrolirano zapiranje povezave, s čimer se spro
 BlueSnarfing je neavtoriziran dostop do informacij na brezžični napravi prek Bluetooth povezave~\cite{bluesnarfing}. Ta napad omogoča pridobitev dostopa do koledarja, telefonskega imenika, e-pošte, SMS sporočil in drugih osebnih podatkov. Pogosto izkorišča profil OBEX Push (Object Exchange), ki ob nepravilni konfiguraciji razkrije podatke brez potrditve uporabnika.
 
 \subsection{MAC address spoofing}
-Ta napad se lahko zgodi, ko se napravi dogovarjata za varne ključe, s katerimi bosta komunicirali, torej mora biti napadalec že na začetku prisoten. Napadalec ponaredi (spoofa) MAC naslov zaupanja vredne naprave in tako prelisiči ciljno napravo, da se poveže z njegovo namesto s prvotno napravo. S tem lahko prestreže komunikacijo ali se lažno avtenticira, ne da bi razkril svoj pravi naslov.
+Ta napad se lahko zgodi med postopkom dogovarjanja o varnih ključih, ki jih napravi uporabljata za komunikacijo, zato mora biti napadalec prisoten že na začetku povezovanja. Napadalec ponaredi (»spoofa«) MAC-naslov zaupanja vredne naprave in tako zavede ciljno napravo, da se poveže z njegovo napravo namesto s prvotno. Na ta način lahko prestreza komunikacijo ali se lažno avtenticira, ne da bi razkril svoj pravi MAC-naslov.
 
 \subsection{BlueBorne}
 BlueBorne je kolekcija več Bluetooth napadov, ki izkoriščajo napake v Bluetooth kopici (stack), zlasti v BlueZ (Linux), Androidu, Windows in iOS. Z uporabo prekoračitve medpomnilnika (buffer overflow) ali drugih pomnilniških napak lahko napadalec na ciljni napravi izvede poljubno nezaželeno kodo, brez da bi bil seznanjen z napravo ali da bi ta zahtevala pairing.
