@@ -1,15 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.9)  12 MAY 2026 12:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.21)  14 MAY 2026 15:33
 entering extended mode
- \write18 enabled.
- file:line:error style messages enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**c:/Users/kleme/Documents/DATOTEKE/FRI/BMO/SeminarskaBMO/template/porocilo.tex
-(c:/Users/kleme/Documents/DATOTEKE/FRI/BMO/SeminarskaBMO/template/porocilo.tex
+**porocilo.tex
+(./porocilo.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
-(C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+L3 programming layer <2026-01-19>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
@@ -23,45 +22,50 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/01/18 v26.1 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
 \babel@savecnt=\count283
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2068.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2070.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2072.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2073.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2074.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2076.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2101.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2111.
 \U@D=\dimen149
-\l@unhyphenated=\language79
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\l@unhyphenated=\language90
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count284
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4196.
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/sl\babel-slovene.tex
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/sl/babel-slovene.tex
 Package babel Info: Name 'slovene' is discouraged.
 (babel)             Prefer 'slovenian' instead.
 (babel)             Reported on input line 16.
 )
 Package babel Info: Importing font and identification data for slovene
-(babel)             from babel-sl.ini. Reported on input line 4320.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/babel-slovenian\slovenian.ldf
+(babel)             from babel-sl.ini. Reported on input line 4330.
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-slovenian/slovenian.ldf
 Language: slovenian 2025/05/10 v1.2p Slovenian support from the babel system
 Package babel Info: Making " an active character on input line 80.
-)) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+)
+(/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -95,13 +99,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 116.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+6.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip51
 \f@nch@offset@elh=\skip52
 \f@nch@offset@erh=\skip53
@@ -117,11 +126,14 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip63
 \f@nch@widthR=\skip64
 \@temptokenb=\toks19
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
@@ -137,40 +149,50 @@ Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count285
 \c@continuedfloat=\count286
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen158
 \Gin@req@width=\dimen159
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\epsfig.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2024/01/14 v1.7b (e)psfig emulation (SPQR)
 \epsfxsize=\dimen160
 \epsfysize=\dimen161
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip65
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
 \ex@=\dimen162
-)) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen163
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count287
@@ -220,26 +242,34 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip68
 \multirow@cntb=\count299
 \multirow@dima=\skip69
 \bigstrutjot=\dimen171
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen172
 \ar@mcellbox=\box55
@@ -256,47 +286,71 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \TX@delta=\dimen178
 \TX@cols=\count300
 \TX@ftn=\toks27
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count301
 \float@exts=\toks28
 \float@box=\box57
 \@float@everytoks=\toks29
 \@floatcapt=\box58
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
-Package: minted 2026/03/03 v3.8.0 Yet another Pygments shim for LaTeX
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2025/05/14 v3.7.0 Yet another Pygments shim for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-))) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count302
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
-Package: fvextra 2026/02/25 v1.14.0 fvextra - extensions and patches for fancyvrb
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
-Package: fancyvrb 2026/04/16 4.6a verbatim text (tvz,hv)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2025/05/29 v1.13.2 fvextra - extensions and patches for fancyv
+rb
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count303
 \FV@InFile=\read3
 \FV@TabBox=\box59
 \c@FancyVerbLine=\count304
 \FV@StepNumber=\count305
 \FV@OutFile=\write3
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-)) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
-Package: lineno 2026/03/08 line numbers on paragraphs v5.9
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2025/05/13 line numbers on paragraphs v5.5
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
 \linenopenalty=\count306
@@ -341,32 +395,42 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 \FV@LineIndentBox=\box65
 \c@FV@BreakBufferDepth=\count327
 \FV@LineWidth=\dimen189
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/latex2pydata\latex2pydata.sty
-Package: latex2pydata 2026/02/25 v0.7.0 latex2pydata - write data to file in Python literal format
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty
+Package: latex2pydata 2025/03/26 v0.6.0 latex2pydata - write data to file in Py
+thon literal format
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks31
 \pgfkeys@temptoks=\toks32
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex
 \pgfkeys@tmptoks=\toks33
-))) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks34
 \pgfopts@list@add@b@toks=\toks35
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 \c@minted@FancyVerbLineTemp=\count328
 \@float@every@listing=\toks36
 \c@listing=\count329
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 LaTeX Info: Redefining \color on input line 762.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -376,45 +440,53 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box66
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count330
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen190
 \Hy@linkcounter=\count331
 \Hy@pagecounter=\count332
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count333
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -429,10 +501,13 @@ Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count334
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen191
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count335
 \Field@Width=\dimen192
@@ -449,30 +524,37 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 \c@Hfootnote=\count338
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count339
 \c@bookmark@seq@number=\count340
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
 )
 \Hy@SectionHShift=\skip73
 )
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 38.
 Package hyperref Info: Option `unicode' set `true' on input line 38.
 Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 38.
+
 Package hyperref Info: Option `pdftoolbar' set `true' on input line 38.
 Package hyperref Info: Option `pdfmenubar' set `true' on input line 38.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count341
-) (porocilo.aux
+)
+(./porocilo.aux
 Package babel Info: 'slovene' activates 'slovene' shorthands.
-(babel)             Reported on input line 9.
+(babel)             Reported on input line 8.
 )
 \openout1 = `porocilo.aux'.
 
@@ -498,7 +580,8 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count342
 \scratchdimen=\dimen194
@@ -511,34 +594,47 @@ Package caption Info: End \AtBeginDocument code.
 \MPnumerator=\count346
 \makeMPintoPDFobject=\count347
 \everyMPtoPDFconversion=\toks38
-) (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 Package hyperref Info: Link coloring OFF on input line 46.
- (porocilo.out) (porocilo.out)
+
+(./porocilo.out) (./porocilo.out)
 \@outlinefile=\write4
 \openout4 = `porocilo.out'.
 
  [1
 
-{C:/Users/kleme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}] (porocilo.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-ec.enc}] (./porocilo.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+4.
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+4.
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -548,7 +644,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 4.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.23 ...ine {5.2}Bluetoothctl}{16}{subsection.5.2}
@@ -557,33 +654,43 @@ l.23 ...ine {5.2}Bluetoothctl}{16}{subsection.5.2}
 \openout5 = `porocilo.toc'.
 
  [2]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 92.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
+2.
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3]
 Overfull \hbox (25.16515pt too wide) in paragraph at lines 112--112
-[]\T1/lmtt/m/n/10.95 results = await BleakScanner.discover(timeout=5.0, return_adv=True)[] 
+[]\T1/lmtt/m/n/10.95 results = await BleakScanner.discover(timeout=5.0, return_
+adv=True)[] 
  []
 
-<heatmap.png, id=208, 578.16pt x 433.62pt>
+<heatmap.png, id=210, 578.16pt x 433.62pt>
 File: heatmap.png Graphic file (type png)
 <use heatmap.png>
 Package pdftex.def Info: heatmap.png  used on input line 126.
 (pdftex.def)             Requested size: 360.0pt x 269.99951pt.
-[4{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [5 <./heatmap.png>] [6]
-<l2ping_in_hcitool.png, id=230, 593.21625pt x 440.64626pt>
+[4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}] [5 <./heatmap.png>]
+<ble_channels.png, id=227, 507.8975pt x 303.1325pt>
+File: ble_channels.png Graphic file (type png)
+<use ble_channels.png>
+Package pdftex.def Info: ble_channels.png  used on input line 150.
+(pdftex.def)             Requested size: 360.0pt x 214.86942pt.
+
+[6 <./ble_channels.png (PNG copy)>]
+<l2ping_in_hcitool.png, id=234, 593.21625pt x 440.64626pt>
 File: l2ping_in_hcitool.png Graphic file (type png)
 <use l2ping_in_hcitool.png>
-Package pdftex.def Info: l2ping_in_hcitool.png  used on input line 167.
+Package pdftex.def Info: l2ping_in_hcitool.png  used on input line 174.
 (pdftex.def)             Requested size: 360.0pt x 267.42218pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 177.
+(Font)              <10> on input line 184.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 177.
+(Font)              <7> on input line 184.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 177.
+(Font)              <5> on input line 184.
 
-Overfull \hbox (54.59796pt too wide) in paragraph at lines 177--190
+Overfull \hbox (54.59796pt too wide) in paragraph at lines 184--197
  [][] 
  []
 
@@ -591,108 +698,122 @@ Overfull \hbox (54.59796pt too wide) in paragraph at lines 177--190
 \pydata@fh@0=\write6
 \openout6 = `_2625186A033BEFBA098DE70EC1FDEDA8.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260512120829 2625186A033BEFBA098DE70EC1FDEDA8)...executed.
+runsystem(latexminted config  --timestamp 20260514153320 2625186A033BEFBA098DE7
+0EC1FDEDA8)...executed safely (allowed).
 
- (_2625186A033BEFBA098DE70EC1FDEDA8.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260512120829 2625186A033BEFBA098DE70EC1FDEDA8)...executed.
 
- (_minted/default.style.minted) (_minted/883FB39722FA3D6A6677CAA5CA85ACD2.highlight.minted
+(./_2625186A033BEFBA098DE70EC1FDEDA8.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20260514153320 2625186A033BEFBA0
+98DE70EC1FDEDA8)...executed safely (allowed).
+
+
+(./_minted/default.style.minted)
+(./_minted/484751BEA589921C58538C35063BED9E.highlight.minted
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2.
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 6.
- (C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+6.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \hbox (54.59796pt too wide) in paragraph at lines 238--251
+Overfull \hbox (54.59796pt too wide) in paragraph at lines 245--258
  [][] 
  []
 
-[8{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
-<handshake.png, id=249, 1059.96pt x 69.25874pt>
+[8{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-mathit.enc}]
+<handshake.png, id=253, 1059.96pt x 69.25874pt>
 File: handshake.png Graphic file (type png)
 <use handshake.png>
-Package pdftex.def Info: handshake.png  used on input line 267.
+Package pdftex.def Info: handshake.png  used on input line 274.
 (pdftex.def)             Requested size: 360.0pt x 23.5223pt.
  [9 <./handshake.png>]
-<zmogljivost_identifikacija.png, id=256, 1314.9125pt x 492.84125pt>
+<zmogljivost_identifikacija.png, id=260, 1314.9125pt x 492.84125pt>
 File: zmogljivost_identifikacija.png Graphic file (type png)
 <use zmogljivost_identifikacija.png>
-Package pdftex.def Info: zmogljivost_identifikacija.png  used on input line 283.
+Package pdftex.def Info: zmogljivost_identifikacija.png  used on input line 290
+.
 (pdftex.def)             Requested size: 360.0pt x 134.92638pt.
 
-Overfull \hbox (7.87697pt too wide) in paragraph at lines 290--291
-[]\T1/lmr/m/n/10.95 Najprej se iz-ve-dejo ukazi \T1/lmtt/m/n/10.95 Read Remote Supported Features \T1/lmr/m/n/10.95 in \T1/lmtt/m/n/10.95 Read Remote
+Overfull \hbox (7.87697pt too wide) in paragraph at lines 297--298
+[]\T1/lmr/m/n/10.95 Najprej se iz-ve-dejo ukazi \T1/lmtt/m/n/10.95 Read Remote 
+Supported Features \T1/lmr/m/n/10.95 in \T1/lmtt/m/n/10.95 Read Remote
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 296.
-(C:\Users\kleme\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
+03.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [10 <./zmogljivost_identifikacija.png>]
-<l2cap_wireshark.png, id=262, 1251.67625pt x 701.62125pt>
+<l2cap_wireshark.png, id=266, 1251.67625pt x 701.62125pt>
 File: l2cap_wireshark.png Graphic file (type png)
 <use l2cap_wireshark.png>
-Package pdftex.def Info: l2cap_wireshark.png  used on input line 308.
+Package pdftex.def Info: l2cap_wireshark.png  used on input line 315.
 (pdftex.def)             Requested size: 360.0pt x 201.79483pt.
  [11 <./l2cap_wireshark.png>]
-<malformed_packet.png, id=269, 1171.37625pt x 86.3225pt>
+<malformed_packet.png, id=273, 1171.37625pt x 86.3225pt>
 File: malformed_packet.png Graphic file (type png)
 <use malformed_packet.png>
-Package pdftex.def Info: malformed_packet.png  used on input line 331.
+Package pdftex.def Info: malformed_packet.png  used on input line 338.
 (pdftex.def)             Requested size: 360.0pt x 26.52917pt.
-<disconect.png, id=270, 1098.1025pt x 70.2625pt>
+<disconect.png, id=274, 1098.1025pt x 70.2625pt>
 File: disconect.png Graphic file (type png)
 <use disconect.png>
-Package pdftex.def Info: disconect.png  used on input line 341.
+Package pdftex.def Info: disconect.png  used on input line 348.
 (pdftex.def)             Requested size: 360.0pt x 23.03444pt.
  [12 <./malformed_packet.png>] [13 <./disconect.png>] [14] [15] [16]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
-Underfull \hbox (badness 8019) in paragraph at lines 517--517
+Underfull \hbox (badness 8019) in paragraph at lines 524--524
 []|\T1/lmr/m/n/10 Deaktivira (iz-klopi) Blu-e-to-oth vme-snik
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 517--517
+Underfull \hbox (badness 1033) in paragraph at lines 524--524
 []|\T1/lmr/m/n/10 Spremeni lo-kalno ime Blu-e-to-oth na-prave
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
+Underfull \hbox (badness 10000) in paragraph at lines 524--524
 []|\T1/lmr/m/n/10 Zaºene Blu-e-to-oth sto-ri-tev (oz.
  []
 
 [18] [19] [20] [21]
-<connesione_doppia_enco.jpg, id=327, 1084.05pt x 1056.94875pt>
+<connesione_doppia_enco.jpg, id=332, 1084.05pt x 1056.94875pt>
 File: connesione_doppia_enco.jpg Graphic file (type jpg)
 <use connesione_doppia_enco.jpg>
-Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 615.
+Package pdftex.def Info: connesione_doppia_enco.jpg  used on input line 622.
 (pdftex.def)             Requested size: 360.0pt x 351.00366pt.
  [22] [23 <./connesione_doppia_enco.jpg>]
-<flipper.png, id=337, 800.9925pt x 702.625pt>
+<flipper.png, id=342, 800.9925pt x 702.625pt>
 File: flipper.png Graphic file (type png)
 <use flipper.png>
-Package pdftex.def Info: flipper.png  used on input line 634.
+Package pdftex.def Info: flipper.png  used on input line 641.
 (pdftex.def)             Requested size: 360.0pt x 315.79236pt.
  [24 <./flipper.png>] [25]
-Underfull \hbox (badness 1297) in paragraph at lines 686--686
+Underfull \hbox (badness 1297) in paragraph at lines 693--693
 []|\T1/lmr/m/n/10 Nikoli ne upo-ra-bljajte krat-kih PIN kod
  []
 
 [26] [27] [28]
-Overfull \hbox (8.14436pt too wide) in paragraph at lines 700--701
-\T1/lmr/m/n/10.95 majhne ne-pra-vil-no-sti v im-ple-men-ta-ciji pro-to-kola (kot so bili \T1/lmr/m/it/10.95 mal-for-med packets
+Overfull \hbox (8.14436pt too wide) in paragraph at lines 707--708
+\T1/lmr/m/n/10.95 majhne ne-pra-vil-no-sti v im-ple-men-ta-ciji pro-to-kola (ko
+t so bili \T1/lmr/m/it/10.95 mal-for-med packets
  []
 
-[29] (porocilo.bbl
+[29] (./porocilo.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
-\T1/lmr/m/n/10.95 nordicsemi . com / courses / bluetooth-[]low-[]energy-[]fundamentals / lessons /
+\T1/lmr/m/n/10.95 nordicsemi . com / courses / bluetooth-[]low-[]energy-[]funda
+mentals / lessons /
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
-\T1/lmr/m/n/10.95 lesson-[]5-[]bluetooth-[]le-[]security-[]fundamentals / topic / pairing-[]process/$[].
+\T1/lmr/m/n/10.95 lesson-[]5-[]bluetooth-[]le-[]security-[]fundamentals / topic
+ / pairing-[]process/$[].
  []
 
 
@@ -707,39 +828,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
 
 Overfull \hbox (113.3565pt too wide) in paragraph at lines 18--23
-\T1/lmr/m/n/10.95 how-[]bluetooth-[]technology-[]uses-[]adaptive-[]frequency-[]hopping-[]to-[]overcome-[]packet-[]interference/$[].
+\T1/lmr/m/n/10.95 how-[]bluetooth-[]technology-[]uses-[]adaptive-[]frequency-[]
+hopping-[]to-[]overcome-[]packet-[]interference/$[].
  []
 
 
 Underfull \hbox (badness 2452) in paragraph at lines 56--63
-[]\T1/lmr/m/n/10.95 Red Hat Cu-sto-mer Por-tal.  Blee-ding-to-oth ^^U ker-nel blu-e-to-oth
+[]\T1/lmr/m/n/10.95 Red Hat Cu-sto-mer Por-tal.  Blee-ding-to-oth ^^U ker-nel b
+lu-e-to-oth
  []
 
 
 Underfull \hbox (badness 3229) in paragraph at lines 56--63
-\T1/lmr/m/n/10.95 vul-ne-ra-bi-li-ties.  []$https : / / access . redhat . com / security / vulnerabilities /
+\T1/lmr/m/n/10.95 vul-ne-ra-bi-li-ties.  []$https : / / access . redhat . com /
+ security / vulnerabilities /
  []
 
-[30]) [31] (porocilo.aux)
+[30]) [31] (./porocilo.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
+L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `porocilo.out' has not changed.
 (rerunfilecheck)             Checksum: 989090E05A1906E04F44B43034B9F45A;7058.
  ) 
 Here is how much of TeX's memory you used:
- 18279 strings out of 467871
- 355348 string characters out of 5418377
- 881817 words of memory out of 5000000
- 46783 multiletter control sequences out of 15000+600000
+ 18184 strings out of 467533
+ 346778 string characters out of 5422138
+ 872143 words of memory out of 5000000
+ 46724 multiletter control sequences out of 15000+600000
  699578 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,11n,93p,1000b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kleme/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on porocilo.pdf (32 pages, 1223653 bytes).
+ 85i,11n,93p,935b,845s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
+Output written on porocilo.pdf (32 pages, 1373999 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 97 named destinations out of 1000 (max. 500000)
- 334 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 498 PDF objects out of 1000 (max. 8388607)
+ 417 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 
